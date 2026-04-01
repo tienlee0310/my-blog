@@ -5,6 +5,174 @@
       <link>https://tienlee0310.github.io/my-blog</link>
       <description>Last 100 notes on TIENLE</description>
       <generator>Quartz -- https://kuberwastaken.github.io/blog/</generator>
-      
+      <item>
+    <title>MindDump</title>
+    <link>https://tienlee0310.github.io/my-blog/</link>
+    <guid>https://tienlee0310.github.io/my-blog/</guid>
+    <description>Chào bạn! Chào mừng đến với blog của mình — đây là nơi mình chia sẻ suy nghĩ, đào sâu vào nhiều chủ đề và đăng những điều mới mình học được lên Internet ...</description>
+    <pubDate>Wed, 01 Apr 2026 08:30:00 GMT</pubDate>
+  </item><item>
+    <title>Source code Claude Code bị leak qua sourcemap trên npm - cùng mổ xẻ</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it</guid>
+    <description>Hôm nay (31/03/2026) — Chaofan Shou trên X phát hiện một thứ mà Anthropic chắc chắn không muốn cả thế giới nhìn thấy: toàn bộ source code của Claude Code (CLI coding chính thức của Anthropic) ...</description>
+    <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Mọi người dùng ChatGPT như thế nào (và vì sao bạn nên quan tâm)</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/How-People-use-ChatGPT-and-Why-You-Should-Care</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/How-People-use-ChatGPT-and-Why-You-Should-Care</guid>
+    <description>OpenAI vừa công bố một bài nghiên cứu và một bài viết rất chi tiết về thứ mà theo mình là một trong những mảnh thông tin quan trọng nhất dành cho bất kỳ ai đang dùng AI hoặc xây dựng sản phẩm với ...</description>
+    <pubDate>Thu, 25 Sep 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>CEO OpenAI nói về “cute thường” và “cute gay” của AI (tiêu đề câu view)</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/OpenAI-CEO-Draws-Line-Between-'Regular-Cute'-and-'Gay-Cute'-for-AI-Models</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/OpenAI-CEO-Draws-Line-Between-'Regular-Cute'-and-'Gay-Cute'-for-AI-Models</guid>
+    <description>Đây là một tiêu đề câu view. Đây mới là thứ ông ấy thực sự nói: Đúng, nó được cố ý đặt như vậy để người ta đọc và phản ứng. Mình biết, và ai từng viết kiểu bài này cũng biết.</description>
+    <pubDate>Wed, 23 Apr 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Mình được dùng sớm Manus AI - nói chuyện chút nhé</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/I-Got-Early-Access-to-Manus-AI---Let's-Talk-About-it</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/I-Got-Early-Access-to-Manus-AI---Let's-Talk-About-it</guid>
+    <description> Trong bức tranh AI thay đổi chóng mặt, ta đã quá quen với những “trợ lý AI” nhìn thì hay nhưng dùng thì mệt. Bạn phải cầm tay chỉ việc liên tục, rồi trả lời cả tá câu hỏi làm rõ — và với nhiều việc phức tạp, chúng đôi khi còn phiền hơn là giúp.</description>
+    <pubDate>Fri, 11 Apr 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Thế tiến thoái lưỡng nan dữ liệu của Big Tech - Khi cuộc đời bạn trở thành “nguyên liệu” huấn luyện AI</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/The-Big-Tech-Data-Dilemma---When-Your-Life-Becomes-AI-Training-Material</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/The-Big-Tech-Data-Dilemma---When-Your-Life-Becomes-AI-Training-Material</guid>
+    <description>Trong “miền viễn tây” số của ngày hôm nay, cuộc sống online của bạn còn giá trị hơn cả vàng. Các ông lớn như Microsoft, Meta, và Google không chỉ “thu thập” dữ liệu của bạn — họ khoan nó như khoan dầu để nuôi đế chế AI trong những data center khổng lồ.</description>
+    <pubDate>Thu, 03 Apr 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Turn this into Ghibli - Khi OpenAI cướp danh tính lớn nhất lịch sử nghệ thuật?</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/Turn-this-into-Ghibli---How-OpenAI-commited-the-largest-identity-theft-in-the-entire-history-of-art</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/Turn-this-into-Ghibli---How-OpenAI-commited-the-largest-identity-theft-in-the-entire-history-of-art</guid>
+    <description> ChatGPT của OpenAI biến mọi thứ thành tranh kiểu Studio Ghibli. Nếu bạn “ở gần” Internet tuần này, bạn chắc chắn đã thấy: selfie, meme, thậm chí cả Elon Musk — tất cả được “morph” sang vibe Ghibli đầy xanh mướt và mơ màng.</description>
+    <pubDate>Fri, 28 Mar 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>OpenAI vs DeepSeek - Cuộc chiến giành “ngôi” AI và ý nghĩa của chữ &quot;Open&quot;</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/OpenAI-vs-DeepSeek---The-Battle-for-AI-Dominance-and-the-Meaning-of-Open</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/OpenAI-vs-DeepSeek---The-Battle-for-AI-Dominance-and-the-Meaning-of-Open</guid>
+    <description> Trong bối cảnh AI phát triển với tốc độ chóng mặt, một cuộc đối đầu mới đang nổi lên và làm rung chuyển cả ngành. OpenAI — từng là “gương mặt đại diện” cho nghiên cứu AI cởi mở — đã chọn một lập trường gây tranh cãi khi đề xuất chính phủ Mỹ cân nhắc cấm các mô hình đến từ phòng lab AI Trung Quốc DeepSeek.</description>
+    <pubDate>Sun, 16 Mar 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Cuộc đua “về 0” của các mô hình AI năm 2025</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/The-AI-Models-Race-to-The-Bottom-in-2025</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/The-AI-Models-Race-to-The-Bottom-in-2025</guid>
+    <description>Ngành AI đang trải qua một cú sốc giảm phát đến mức có lẽ thợ đào Bitcoin cũng phải “ngượng”. Kể từ khi GPT-3 ra mắt năm 2020, chi phí LLM sụp từ 60 xuống 0,02 cho mỗi triệu token — một cú nổ giá 3.000x đang định hình lại mô hình kinh doanh, kiến trúc kỹ thuật, và tương quan quyền lực.</description>
+    <pubDate>Mon, 10 Mar 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Interview Coder của Roy Lee: Gian lận hay hồi chuông cảnh tỉnh?</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/Roy-Lee's-Interview-Coder---Cheating-or-a-Wake-Up-Call</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/Roy-Lee's-Interview-Coder---Cheating-or-a-Wake-Up-Call</guid>
+    <description>Hãy tưởng tượng một thế giới nơi phỏng vấn lập trình “dễ đoán” như twist của phim Marvel dạo này. Chào mừng Roy Lee — sinh viên năm 2 khoa học máy tính ở Columbia, người đi từ “Leetcode Messiah” trên Reddit đến kẻ phá bĩnh gây tranh cãi nhất của Twitter (mình từ chối gọi là X).</description>
+    <pubDate>Tue, 04 Mar 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Google Gemini 2.0 đã bắt kịp cuộc đua AI như thế nào</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/How-Google-Gemini-2.0-Caught-Up-in-the-AI-Race</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/How-Google-Gemini-2.0-Caught-Up-in-the-AI-Race</guid>
+    <description>Bạn còn nhớ thời mà “tìm trên web” nghĩa là phải lục 10 trang kết quả không? Google đã thay đổi điều đó mãi mãi. Và giờ họ đang làm lại một lần nữa với trí tuệ nhân tạo — dù hơi chậm (và chắc chắn cũng vì DeepSeek) — và lần này không chỉ là search.</description>
+    <pubDate>Sun, 09 Feb 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>DeepSeek vs. ChatGPT - Ván cờ AI làm “nổ tung” Internet</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/DeepSeek-vs.-ChatGPT---The-AI-Chess-Showdown-That-Broke-the-Internet</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/DeepSeek-vs.-ChatGPT---The-AI-Chess-Showdown-That-Broke-the-Internet</guid>
+    <description>Thưa quý vị, thắt dây an toàn. Thứ bạn sắp đọc là ván cờ “điên” nhất của cả thập kỷ — một màn so tài giữa DeepSeek và ChatGPT trong Khủng hoảng AI 2025 khét tiếng.</description>
+    <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Wrapper cho ChatGPT: Cách mạng hoá trải nghiệm hay che giấu giới hạn?</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/ChatGPT-Wrappers---Revolutionizing-User-Experience-or-Hiding-Limitations</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/ChatGPT-Wrappers---Revolutionizing-User-Experience-or-Hiding-Limitations</guid>
+    <description>Trong thế giới NLP và AI liên tục biến động, các “wrapper” cho ChatGPT đang tạo ra khá nhiều ồn ào. Những công cụ này đóng vai trò trung gian giữa người dùng và ChatGPT — mô hình ngôn ngữ tiên tiến do OpenAI phát triển.</description>
+    <pubDate>Tue, 04 Feb 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>A Dummy-Proof Guide to Git and GitHub</title>
+    <link>https://tienlee0310.github.io/my-blog/Technology/A-Dummy-Proof-Guide-to-Git-and-GitHub</link>
+    <guid>https://tienlee0310.github.io/my-blog/Technology/A-Dummy-Proof-Guide-to-Git-and-GitHub</guid>
+    <description>If you’ve ever looked up a Git or GitHub tutorial, you’ve probably been overwhelmed by the complexity. It can seem like a huge, intimidating system full of jargon.</description>
+    <pubDate>Mon, 03 Feb 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Marks Calculators</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Marks-Calculators/</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Marks-Calculators/</guid>
+    <description> Semester 1: mega.nz/file/cV4kgbLK#FfV-AtP_6Tm7Tu1Mo51RyltSY-yCGSigZr6ChJ-DQQc .</description>
+    <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>DM</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-0.5/DM</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-0.5/DM</guid>
+    <description>DISCRETE MATHEMATICS Here’s the content I used for DM: mega.nz/folder/cIgjGAZA#t812Ak1GCUbxNgDX0gObcA Honestly a bit easy for being a mathematics course for some reason? Study ...</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>ITP</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-0.5/ITP</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-0.5/ITP</guid>
+    <description>INTRODUCTION TO PROGRAMMING Here’s the content I used for ITP: mega.nz/folder/0Iw0mKoK#uy2sav76WLlP8iSJh753zA AWESOME course Professor Jagat is a chill guy and actually does ...</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>WP</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-0.5/WP</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-0.5/WP</guid>
+    <description>WRITING PRACTICE Here’s the content I used for WP: mega.nz/folder/8Io0ELDB#oM3_-xgB0enqU-3zwfs9Dw Extremely easy for what it’s worth, if you’re good in English and literature, ...</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Semester 0.5 Material</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-0.5/</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-0.5/</guid>
+    <description> Introduction To Programming Discrete Mathematics Writing Practice .</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>BE</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-1/BE</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-1/BE</guid>
+    <description>BASIC ELECTRONICS Alright I seem to have completely misplaced my BE folder for some reason haha, please use drive.google.com/drive/folders/10tlLEI93SrbMcCigCRczgmZrLQhrLdB4 ...</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>ICS</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-1/ICS</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-1/ICS</guid>
+    <description>INTRODUCTION TO COMPUTING SYSTEMS Here’s the content I used for ICS: mega.nz/folder/sEBDUIDZ#DbGs2jivV7muWY4ArxymdA Pro tip: The course starts off slow but gets intense quick, ...</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>LAO</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-1/LAO</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-1/LAO</guid>
+    <description>LINEAR ALGEBRA AND OPTIMIZATIONS Here’s the material I used for LAO: mega.nz/folder/odAhmLLK#m_quqX4HYq06hV_yV65C9g Honorable mention to atozmath.com/ ‘s calculator (SAVED ...</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Semester 1 Material</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-1/</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/Sem-1/</guid>
+    <description> Introduction To Computing Systems Linear Algebra and Optimisation Basic Electronics .</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Exam Materials and Reference books</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/Exam-Materials/</guid>
+    <description>This part contains the reference materials I used for exams (yes, even in the online test) is it the absolute best set of materials to study the subjects? no would it be good enough to ...</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>BITS Survival Guide</title>
+    <link>https://tienlee0310.github.io/my-blog/BITS/</link>
+    <guid>https://tienlee0310.github.io/my-blog/BITS/</guid>
+    <description>Hi! If you are here, you’re probably a BITS Online student or you just like to find easter eggs in websites :P Those of you who don’t know me, Hi! My name is Kuber Mehta and I’m a C4 student ...</description>
+    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>AI có thể hiểu cảm xúc không? Giới hạn của phân tích cảm xúc (sentiment analysis)</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/Can-AI-Understand-Emotions-The-Limits-of-Sentiment-Analysis</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/Can-AI-Understand-Emotions-The-Limits-of-Sentiment-Analysis</guid>
+    <description>Trí tuệ nhân tạo đã có những bước nhảy vọt đáng kinh ngạc trong vài năm gần đây — từ chẩn đoán bệnh đến sáng tác nhạc. Tuy nhiên, vẫn có một câu hỏi mà ngay cả các hệ thống tiên tiến nhất cũng chưa trả lời được một cách thỏa đáng: AI có thật sự hiểu cảm xúc con người không? Dù các công cụ sentiment analysis tuyên bố có thể “giải mã” cảm xúc từ văn bản, giọng nói, hay biểu cảm khuôn mặt, khả năng của máy móc trong việc nắm được những sắc thái tinh vi của cảm xúc con người vẫn rất hạn chế.</description>
+    <pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>DeepSeek R1 vs ChatGPT: Vì sao đây không phải trò chơi được-mất (zero-sum)</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/DeepSeek-R1-vs-ChatGPT-Why-This-Isn't-a-Zero-Sum-Game</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/DeepSeek-R1-vs-ChatGPT-Why-This-Isn't-a-Zero-Sum-Game</guid>
+    <description>Những cuộc thảo luận gần đây về DeepSeek R1 và tác động “được cho là” của nó lên OpenAI, NVIDIA, hay Meta đã châm ngòi tranh luận rất gắt trong cộng đồng AI ...</description>
+    <pubDate>Wed, 29 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>AI tạo sinh và hệ thống bản quyền - Vùng xám pháp lý</title>
+    <link>https://tienlee0310.github.io/my-blog/AI/Generative-AI-and-the-Copyright-System---The-Legal-Gray-Area</link>
+    <guid>https://tienlee0310.github.io/my-blog/AI/Generative-AI-and-the-Copyright-System---The-Legal-Gray-Area</guid>
+    <description>...</description>
+    <pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate>
+  </item>
     </channel>
   </rss>
