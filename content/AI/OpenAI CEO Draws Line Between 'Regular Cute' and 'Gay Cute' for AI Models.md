@@ -1,5 +1,5 @@
 ---
-title: OpenAI CEO Draws Line Between 'Regular Cute' and 'Gay Cute' for AI Models
+title: CEO OpenAI nói về “cute thường” và “cute gay” của AI (tiêu đề câu view)
 draft: false
 tags:
   - AI
@@ -12,83 +12,89 @@ tags:
 created: 2025-04-23
 modified: 2025-04-23
 ---
-This is a clickbait title. Here's what he actually said:
+Đây là một tiêu đề câu view. Đây mới là thứ ông ấy thực sự nói:
 
 ![Clickbait_Tweet](<https://media-hosting.imagekit.io/1607b76bfa5b45e1/Screenshot%202025-04-23%20091854.png?Expires=1839989679&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=2iheeeu56FaQhbsJ950EVdKqzeTruh3qEdZKlhSEyZ7KOLjp5uixkmZ8TkDqUuzeKi8jIiS8d~KoogRleLv-e5sicsYr0nFX9OEr8TVhQF2J8pQVUWx07nXyk7c4204N2REwqw84KxxCDjNSu7BXqemyygQzGbAfGXZHBCSThRa7Nv3UG4QrMJDPqcFOBTpE8gjnJOC-YTuNfdd~vsrpiPvsOVZBMnkdRRjH5~PB0gISwRPSD0hsP68ZWBAsiCSzvvNQ17DV84dEtDsRwnGRJVge9ScumVOqOXUuE5UGpG1d84xohDxal-6l7J1OwWF-EABk1x9w3upw042Fx3EHHg__>)
 
-Yes, it's intended to be that way so people read it and react to it. I know it, so does everyone that writes articles like these.
+Đúng, nó được cố ý đặt như vậy để người ta đọc và phản ứng. Mình biết, và ai từng viết kiểu bài này cũng biết.
 
-And people fall for it. Not just your average joe, but extremely well-read people. So has been traditional media for decades and surprisingly, so are platforms like LinkedIn.
+Và mọi người vẫn sập bẫy. Không chỉ “người bình thường”, mà cả những người rất đọc nhiều và hiểu biết. Báo chí truyền thống đã làm vậy hàng thập kỷ, và bất ngờ là các nền tảng như LinkedIn cũng vậy.
 
-If you've been on social media in the past week, you've seen people react to this tweet by Sam Altman:
+Nếu bạn dùng mạng xã hội tuần vừa rồi, bạn hẳn đã thấy người ta phản ứng với tweet này của Sam Altman:
   
 ![Electrcity_costs](https://pbs.twimg.com/media/GpIV4i7XgAAAx4T?format=jpg&name=4096x4096)
 
-what is extremely funny is that many self proclaimed "AI Experts", Founders and people with Executive level positions in a lot of major places put out stuff like this (literally didn't even sort by latest, just searched OpenAI here)
+Điều cực kỳ buồn cười là nhiều “AI Expert” tự phong, founder, và cả người giữ vị trí executive ở nhiều nơi lớn lại đăng những thứ kiểu này (mình thậm chí còn không lọc theo latest, chỉ search OpenAI thôi):
 
 ![linkedinpostslol](<https://media-hosting.imagekit.io/98abaaa8741e4af4/linkedinpostslol.png?Expires=1839990453&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=AAzTzcqlJPrNf8bxCOacMpmsdAtooOPKjAoTjKva-e1QGYMeVQanL1uAW8da~r9r0pQYVr1YE9xz-q2gWfGOjRwgSaCC7~njYzzb~xSDsuYQ5Lo-BqNE4hRUqbybQo5q73RWDMY~u1ctsEKdXcracxFAeliKSawj43n3u8vKlKEIZxmImDpco94DBRu04pxzQUvOMF3eJ2szCtDX5DahdksLvBzjmLNp7DirWAgPzVADXdRKSr-6M7GUyUDYFaOdvy6PzEg7~K~2vnLI6FZ9uF63231MX2wc2Iu2nU95c~hPRMRig2xM5nObmCDFkJ04jfplaNZ06aO8WI5IQJ5r4A__>)
 
-**What**. **The**. **Actual**. **Hell**.
+**Cái**. **Gì**. **Vậy**. **Trời**.
 
-People do not understand what's a joke, and it's extremely concerning because of the fact that we're not in a traditional exclusive media format right now where narratives can be changed based on the person or the author presenting it. This is social media.
+Người ta không hiểu cái gì là đùa, và điều đó đáng lo vì hiện tại chúng ta không còn ở định dạng truyền thông “độc quyền” nơi câu chuyện có thể bị bẻ lái tuỳ người kể hay tác giả. Đây là mạng xã hội.
 
-A guy on X actually asked ChatGPT o3 to estimate said costs, and as expected, it's less than 150k (which is nothing on the scale OpenAI operates).
+Có một người trên X đã hỏi ChatGPT o3 ước tính chi phí điện như vậy, và như dự đoán, nó dưới 150k (chẳng đáng gì so với quy mô OpenAI vận hành).
 
 ![Image of calculations](https://pbs.twimg.com/media/GpIV5GxWoAEf8ux?format=jpg&name=large)
 ###### credit - @luismbat on X
 
-We're nerds, we make jokes, we mess around. We put a 5'7" guy who laid across the Harvard bridge as a unit of measurement on Google Earth (It's called smoot, seriously check it out). And it surprises me how "professional" platforms haven't caught up to that fact.
-## The Ever-Existing Clickbait Economy
+Chúng ta là nerd: chúng ta đùa, chúng ta nghịch. Chúng ta từng lấy một ông cao 5'7" nằm ngang cây cầu Harvard làm đơn vị đo trên Google Earth (gọi là smoot — nghiêm túc đấy, thử tra xem). Và mình ngạc nhiên khi các nền tảng “chuyên nghiệp” vẫn chưa bắt kịp điều đó.
 
-This phenomenon isn't unique to AI or tech news. The pattern of sensationalizing statements, removing context, and manufacturing outrage has been a media strategy for generations. You see it all the time on YouTube, But what's different now is the speed and scale at which misinformation spreads.
+## Nền kinh tế clickbait luôn tồn tại
 
-You know what this AI scene somewhat draws a parallel to though? The dot-com bubble.
-During the dot-com bubble of the late 1990s, traditional media played a similar role in both hyping and then demonizing internet companies. Headlines would swing wildly from "The New Economy Will Change Everything Forever" to "Internet Stocks Worthless, Experts Say" within months.
+Hiện tượng này không chỉ riêng AI hay tin công nghệ. Việc giật tít, cắt ngữ cảnh, và sản xuất “phẫn nộ” đã là chiến lược truyền thông qua nhiều thế hệ. Bạn thấy nó khắp YouTube. Nhưng thứ khác biệt bây giờ là tốc độ và quy mô lan truyền thông tin sai.
 
-The dot-com era saw media outlets breathlessly reporting on companies with no revenue and absurd valuations, helping fuel what would become one of the most extreme speculative bubbles in market history. Publications that once celebrated these companies as revolutionary later mocked them as obvious failures after the crash.
+Bạn biết “cảnh AI” này có điểm nào giống không? Bong bóng dot-com.
+Trong bong bóng dot-com cuối thập niên 1990, truyền thông cũng đóng vai trò tương tự: vừa thổi phồng rồi lại quay sang demonize các công ty Internet. Tiêu đề có thể nhảy từ “Nền kinh tế mới sẽ thay đổi mọi thứ mãi mãi” sang “Cổ phiếu Internet vô giá trị, chuyên gia nói” chỉ trong vài tháng.
 
-## The Dot-Com Media Circus and Today's AI Hype
+Thời dot-com chứng kiến báo chí thở hổn hển đưa tin về những công ty không doanh thu nhưng định giá phi lý, góp phần đổ thêm dầu vào một trong những bong bóng đầu cơ lớn nhất lịch sử. Những tờ báo từng ca ngợi các công ty này là cách mạng sau đó lại chế giễu họ là thất bại “ai cũng biết” sau khi bong bóng vỡ.
 
-The media coverage of the AI boom now is kinda similar to the whole dot-com thing back in the day. It's like history is repeating itself! The news always goes to extremes, showing only the super exciting or scary sides of things. It's like they take what folks say and twist it to make it seem way more dramatic than it is. Also, loads of people are claiming to be "experts" when they don't really know that much about AI. It's like everyone's all hyped up about the wrong stuff, focusing on the wrong metrics and numbers. They're just different from the old ones, like "eyeballs" and "clicks" have become "parameters" and "tokens". 
-## The Media's Role in Bubble Creation
+## Rạp xiếc truyền thông dot-com và hype AI hiện nay
 
-The media has this interesting relationship with technology bubbles - they don't just report on them, they actually help make them! Back in the dot-com days, business newspapers like The Wall Street Journal and magazines like Forbes extensively covered "the tech boom". They made it seem like investing in startups was the best idea ever, fueling the bubble.
+Cách truyền thông đưa tin về “bùng nổ AI” bây giờ khá giống dot-com hồi đó. Cảm giác như lịch sử lặp lại. Tin tức đi tới cực đoan, chỉ chọn mặt siêu hào hứng hoặc siêu đáng sợ. Họ lấy thứ người ta nói rồi bẻ nó thành thứ kịch tính hơn nhiều. Thêm nữa, quá nhiều người tự nhận là “expert” dù thật ra hiểu rất ít. Ai cũng hype sai thứ: tập trung vào metric/numbers “ảo” — chỉ là thay “eyeballs/clicks” bằng “parameters/tokens”.
 
-And guess what? We're seeing the same with AI now. The media is going wild over AI, with headlines everywhere shouting about the next big thing. Everyone's getting FOMO (fear of missing out), which makes them invest more and more money in AI startups. Venture funding in this area has gone through the roof! It's like a self-fulfilling prophecy: the media hypes AI, which makes everyone rush to invest, which then confirms the hype. It's a viscous cycle.
+## Vai trò của truyền thông trong việc tạo bong bóng
 
-The media's role in both eras follows a predictable pattern which I like to call CLOWN
+Truyền thông có mối quan hệ kỳ lạ với bong bóng công nghệ: họ không chỉ đưa tin — họ còn góp phần tạo ra nó. Hồi dot-com, các báo kinh doanh như The Wall Street Journal và tạp chí như Forbes đưa tin dày đặc về “tech boom”. Họ khiến việc đầu tư startup trông như ý tưởng hay nhất thế giới, từ đó đẩy bong bóng lên cao.
 
-- **C**aptivation (Discovery phase): Breathless coverage of a new technology's potential
-- **L**audation (Evangelism phase): Uncritical amplification of the most optimistic voices
-- **O**bsession (Gold rush phase): Detailed tracking of funding rounds and valuations, creating FOMO
-- **W**aning (Disillusionment phase): Sudden pivot to skepticism when the bubble shows signs of weakness
-- **N**egation (Blame phase): Articles explaining why the bubble was obviously unsustainable all along
+Và đoán xem? AI hôm nay cũng vậy. Truyền thông “bắn” headline khắp nơi về AI như “thứ lớn tiếp theo”. Ai cũng FOMO, đổ tiền vào startup AI. Vốn VC bay lên trời. Nó giống một lời tiên tri tự hoàn thành: media hype AI → mọi người rush vào đầu tư → điều đó lại “xác nhận” hype. Đó là một vòng lặp độc hại.
 
-We're currently somewhere between phases 2 and 3 with AI, with some early signs of phase 4 emerging as certain AI startups fail to deliver on their promises.
-## The Speed of Misinformation
+Mình gọi mô hình này là CLOWN:
 
-What's different now is the velocity. During the dot-com era, a misinterpreted statement might take days to spread through traditional media channels. Today, a single post can generate thousands of reactions within hours, with each layer of sharing further removing context and nuance.
+- **C**aptivation (Giai đoạn khám phá): đưa tin cuồng nhiệt về tiềm năng công nghệ mới
+- **L**audation (Giai đoạn truyền giáo): khuếch đại không phê phán các giọng lạc quan nhất
+- **O**bsession (Giai đoạn đào vàng): theo dõi funding/định giá chi tiết, tạo FOMO
+- **W**aning (Giai đoạn vỡ mộng): đột ngột quay sang hoài nghi khi bong bóng có dấu yếu
+- **N**egation (Giai đoạn đổ lỗi): viết bài giải thích vì sao bong bóng “rõ ràng” là không bền từ đầu
 
-The AI boom, like the internet boom before it, represents a genuine technological transformation. As one analysis put it: "The late 1990s marked a surge in internet adoption, with global internet users rising from 16 million in 1995 to over 300 million by 2000, fundamentally altering communication and information access." Today's AI advancements are similarly revolutionary, but the noise-to-signal ratio in media coverage makes it difficult to separate substance from hype.
+Hiện tại ta đang đâu đó giữa giai đoạn 2 và 3 với AI, với dấu hiệu sớm của giai đoạn 4 khi một số startup AI bắt đầu không giao được thứ họ hứa.
 
-## The Bubble Economics of AI
+## Tốc độ của thông tin sai
 
-The way companies and startups are valued in tech bubbles is pretty interesting. In the dot-com era, companies were valued based on how many people visited their websites, which doesn't really make sense when you think about it. Nowadays, AI startups are valued based on the size of their data or how well their models perform on benchmarks. But do these things really tell us if the company is going to be successful?
+Điểm khác biệt bây giờ là vận tốc. Thời dot-com, một câu bị hiểu sai có thể mất vài ngày mới lan qua kênh truyền thông. Hôm nay, một bài đăng có thể tạo hàng nghìn phản ứng trong vài giờ, mỗi lớp chia sẻ lại làm mất thêm ngữ cảnh và sắc thái.
 
-The stock market back then saw huge rises and falls that seem similar to what's happening now with AI. The costs of developing AI models have dropped massively, and AI startups are losing loads of money just to stay afloat and capture a part of the market. But the news we hear about AI is all super positive, focusing on how amazing it all is rather than whether it's actually a good investment. History seems to be repeating itself!
-## Learning from History
+Bùng nổ AI — như bùng nổ Internet trước đó — là một chuyển đổi công nghệ có thật. Như một phân tích nói: “Cuối thập niên 1990 chứng kiến internet được nhận dùng mạnh, người dùng toàn cầu tăng từ 16 triệu (1995) lên hơn 300 triệu (2000), thay đổi căn bản giao tiếp và tiếp cận thông tin.” Các tiến bộ AI hôm nay cũng mang tính cách mạng, nhưng tỷ lệ noise/signal trong media khiến ta khó phân biệt giá trị thật với hype.
 
-The dot-com bubble ultimately burst on March 10, 2000, wiping out trillions in market value. Many companies that had achieved market capitalizations in the hundreds of millions became worthless within months. The aftermath was devastating, with massive layoffs and investor capital evaporating overnight.
+## Kinh tế bong bóng của AI
 
-Yet from those ashes rose the tech giants that now dominate our digital landscape. Amazon, eBay, and others survived because they had sustainable business models beneath the hype.
+Cách công ty/startup được định giá trong bong bóng tech rất thú vị. Thời dot-com, người ta định giá theo lượng người ghé web — nghe vô lý nếu nghĩ kỹ. Giờ, startup AI được định giá theo kích thước dữ liệu hoặc benchmark. Nhưng những thứ đó có thật sự nói được công ty sẽ thành công không?
 
-It's the same old cliche: Don't believe the hype. The loudest narratives out there aren't always the most reliable when it comes to understanding tech. We should probably be looking closer at the companies and technologies that aren't trying to grab all the attention. They might just be the ones that last.
-## The Solution?
+Chứng khoán hồi đó tăng/giảm dữ dội giống những gì đang xảy ra với AI. Chi phí phát triển mô hình AI giảm rất mạnh, và startup AI đốt tiền chỉ để tồn tại và giành thị phần. Nhưng tin tức về AI lại toàn màu hồng, nói về sự “tuyệt vời” thay vì nó có đáng đầu tư không. Lịch sử có vẻ đang lặp lại.
 
-There isn't one simple fix. You, as a reader, are responsible for knowing and verifying what you read. Find the source, check it, see if you interpret it the same way.
+## Học từ lịch sử
 
-The internet can be a very hard place to be if you don't understand humor or sarcasm. That's the truth.
+Bong bóng dot-com cuối cùng vỡ vào ngày 10/03/2000, thổi bay hàng nghìn tỷ đô giá trị thị trường. Nhiều công ty từng định giá hàng trăm triệu trở thành vô giá trị chỉ trong vài tháng. Hậu quả rất nặng: sa thải hàng loạt và vốn của nhà đầu tư bay hơi chỉ qua một đêm.
 
-As we navigate the current AI boom, remember that headlines are designed to provoke emotion, not convey nuance. Just as the dot-com era eventually separated sustainable innovations from speculative excess, the AI landscape will eventually be defined not by tweets and hot takes, but by technologies that deliver genuine value.
+Nhưng từ tro tàn đó, các ông lớn tech thống trị hôm nay đã trỗi dậy. Amazon, eBay, và một số khác sống sót vì họ có mô hình kinh doanh bền dưới lớp hype.
 
-In the meantime, maybe we could all benefit from saying "please" and "thank you" to our AI models especially because it doesn't actually cost tens of millions of dollars...
+Lại là câu sáo cũ: đừng tin hype. Những câu chuyện ồn ào nhất không phải lúc nào cũng đáng tin nhất để hiểu công nghệ. Có lẽ ta nên nhìn kỹ hơn vào những công ty và công nghệ không cố giành hết spotlight. Chúng có thể là thứ tồn tại lâu dài.
+
+## Giải pháp?
+
+Không có một “đũa thần”. Bạn — người đọc — có trách nhiệm biết và kiểm chứng những gì bạn đọc. Tìm nguồn, kiểm tra, xem bạn hiểu có giống vậy không.
+
+Internet là nơi rất khó sống nếu bạn không hiểu hài hước hay mỉa mai. Đó là sự thật.
+
+Khi đi qua “cơn sốt AI”, hãy nhớ headline được thiết kế để kích cảm xúc, không phải để truyền sắc thái. Giống như dot-com cuối cùng tách được đổi mới bền vững khỏi đầu cơ quá đà, bức tranh AI cuối cùng cũng sẽ được định hình không phải bởi tweet hay hot take, mà bởi công nghệ tạo giá trị thật.
+
+Trong lúc đó, có lẽ chúng ta cũng nên nói “please” và “thank you” với AI model của mình… nhất là vì nó không tốn đến hàng chục triệu đô tiền điện đâu.
+

@@ -1,5 +1,5 @@
 ---
-title: OpenAI vs DeepSeek - The Battle for AI Dominance and the Meaning of "Open"
+title: OpenAI vs DeepSeek - Cuộc chiến giành “ngôi” AI và ý nghĩa của chữ "Open"
 draft: false
 tags:
   - AI
@@ -16,113 +16,114 @@ modified: 2025-03-16
 ---
 ![Funny Meme based on the current Situation](https://pbs.twimg.com/media/FwWNmEYXwAI1NoG.png)
 
-In the rapidly evolving landscape of artificial intelligence, a new rivalry has emerged that's reshaping the entire industry. OpenAI, once the poster child for open-source AI research, has taken a controversial stance by proposing that the U.S. government consider banning models from Chinese AI lab DeepSeek. This move has ignited debate about the true meaning of "open" in artificial intelligence and highlighted the growing tensions between Western and Chinese AI development.
+Trong bối cảnh AI phát triển với tốc độ chóng mặt, một cuộc đối đầu mới đang nổi lên và làm rung chuyển cả ngành. OpenAI — từng là “gương mặt đại diện” cho nghiên cứu AI cởi mở — đã chọn một lập trường gây tranh cãi khi đề xuất chính phủ Mỹ cân nhắc cấm các mô hình đến từ phòng lab AI Trung Quốc DeepSeek. Động thái này châm ngòi tranh luận về ý nghĩa thật sự của chữ “open” trong AI, đồng thời phơi bày căng thẳng ngày càng tăng giữa hệ sinh thái AI phương Tây và Trung Quốc.
 
-Let's dive into this fascinating conflict and explore what it means for the future of AI development.
+Hãy cùng đào sâu xung đột thú vị này và xem nó nói gì về tương lai phát triển AI.
 
-## What's Happening Between OpenAI and DeepSeek?
+## Chuyện gì đang xảy ra giữa OpenAI và DeepSeek?
 
-OpenAI recently submitted a policy proposal to the U.S. government that describes DeepSeek as a "state subsidized and state controlled operation." The proposal recommends potentially banning models from DeepSeek and similar organizations supported by the Chinese government.
+Gần đây, OpenAI đã nộp một đề xuất chính sách lên chính phủ Mỹ, mô tả DeepSeek là một “hoạt động được trợ cấp và kiểm soát bởi nhà nước”. Đề xuất khuyến nghị cân nhắc cấm các mô hình từ DeepSeek và các tổ chức tương tự được chính phủ Trung Quốc hỗ trợ.
 
-This recommendation comes at a time when DeepSeek has been gaining significant attention for its R1 model, which offers impressive capabilities while being more openly available than many Western counterparts.
+Khuyến nghị này xuất hiện đúng lúc DeepSeek đang nhận được rất nhiều chú ý nhờ mô hình R1 — một mô hình có năng lực ấn tượng trong khi lại “mở” hơn nhiều so với nhiều đối thủ phương Tây.
 
-The timing is particularly interesting given OpenAI's recent pricing adjustment for their GPT-3.5 Mini model and renewed commitments to more open-source initiatives – moves that some industry observers interpret as direct responses to DeepSeek's growing influence.
+Thời điểm càng thú vị hơn nếu đặt cạnh việc OpenAI gần đây điều chỉnh giá cho GPT-3.5 Mini và tái nhấn mạnh các cam kết “mở” hơn — những động thái mà một số người trong ngành đọc như phản ứng trực tiếp trước ảnh hưởng đang tăng của DeepSeek.
 
-## OpenAI's Arguments Against DeepSeek
+## Lập luận của OpenAI chống lại DeepSeek
 
-According to OpenAI's proposal, they're concerned about ensuring people have what they call "freedom of elligence" – the ability to access and benefit from advanced AI systems without interference from "autocratic powers" or excessive regulation.
+Theo đề xuất của OpenAI, họ lo ngại về việc đảm bảo điều họ gọi là “freedom of elligence” — khả năng tiếp cận và hưởng lợi từ các hệ thống AI tiên tiến mà không bị can thiệp bởi “các thế lực độc đoán” hoặc bởi các quy định quá mức.
 
-OpenAI points out that more than 400,000 people worldwide use ChatGPT for various creative and productive purposes, positioning American AI development as competing against "a Chinese Communist Party determined to become the global Leader by 2030."
+OpenAI nhấn mạnh rằng có hơn 400.000 người trên toàn cầu dùng ChatGPT cho các mục đích sáng tạo và năng suất, và đặt việc phát triển AI của Mỹ trong thế cạnh tranh với “một Đảng Cộng sản Trung Quốc quyết tâm trở thành lãnh đạo toàn cầu vào năm 2030”.
 
 ![Screenshot of Proposal](<https://media-hosting.imagekit.io//f1850e1f358c4a2d/Screenshot 2025-03-16 155917.png?Expires=1836728968&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=p9YTYL0F~uiIhaZOg~1sMahjM2YU-BefLUDh-YgBTgYJlizfgbzqKKBQwf9iurUdsodLvRrNFLv0pbRCRtn7no3OGw4V~ws6Ewtk2C48uWVB01RwvPUXrR2OoAKBAzP3pRhEsLiBXafk36bmLNM6cYYowPMO3eDvhCVbS0TbPSzrkxjDCd2i4lGH1NJfMCSw6NIgDqqLXxw764~U14agpdyGiyyAU-ZUTQSJNTtJwpY9O4mAlmXR33r6icl2KHCIH2d0SOkFpxOaSBhODhTNEOKiOVZOKJsJBEoMJ9GOIL-g7Rmlt4GCuwLR-We-pDsIiHyydA47yce7uef9leZzjg__>)
 
-The proposal specifically calls out DeepSeek's R1 model as noteworthy not because of its capabilities (which OpenAI claims are "at best on par with several US models") but because DeepSeek is:
-1. State subsidized
-2. State controlled
-3. Freely available
+Đề xuất đặc biệt gọi tên R1 của DeepSeek là đáng chú ý không phải vì năng lực (OpenAI nói rằng “nhiều nhất thì cũng ngang với vài mô hình Mỹ”), mà vì DeepSeek:
+1. Được nhà nước trợ cấp
+2. Bị nhà nước kiểm soát
+3. Được cung cấp miễn phí
 
-OpenAI argues that the cost to DeepSeek users is "their privacy and security," suggesting that Chinese law requires DeepSeek to comply with government demands for user data.
+OpenAI lập luận rằng cái giá người dùng DeepSeek phải trả là “quyền riêng tư và an ninh”, ám chỉ luật Trung Quốc buộc DeepSeek phải đáp ứng yêu cầu của chính phủ về dữ liệu người dùng.
 
-## The Privacy Paradox
+## Nghịch lý về quyền riêng tư
 
-One of the most glaring contradictions in OpenAI's argument relates to privacy and security. The proposal suggests that using DeepSeek models compromises user privacy – but this claim ignores a fundamental difference in how these models can be used.
+Một trong những điểm mâu thuẫn rõ nhất trong lập luận của OpenAI nằm ở quyền riêng tư và an ninh. Đề xuất nói dùng mô hình DeepSeek sẽ làm lộ dữ liệu người dùng — nhưng lập luận này bỏ qua một khác biệt nền tảng về cách người ta có thể dùng các mô hình này.
 
-When you use OpenAI's services, your data must pass through their infrastructure. Unless you have a special partnership with Azure, you can't run OpenAI models locally in a way that fully protects your privacy.
+Khi bạn dùng dịch vụ của OpenAI, dữ liệu của bạn phải đi qua hạ tầng của họ. Trừ khi bạn có hợp tác đặc biệt với Azure, bạn không thể chạy mô hình OpenAI cục bộ theo cách bảo vệ hoàn toàn quyền riêng tư.
 
-In contrast, many AI enthusiasts run DeepSeek's open models on their own hardware, completely eliminating the need to share data with any external entity – Chinese or otherwise.
+Ngược lại, nhiều người đam mê AI chạy các mô hình “mở” của DeepSeek ngay trên phần cứng của họ, loại bỏ hoàn toàn nhu cầu chia sẻ dữ liệu với bất kỳ bên ngoài nào — dù là Trung Quốc hay bất kỳ ai khác.
 
-As Theo put it, "When I'm running a model on my machines and my infrastructure, my privacy and security are not being compromised – unlike when I use OpenAI, where my data has to run on their systems."
+Như Theo nói: “Khi tôi chạy mô hình trên máy và hạ tầng của mình, quyền riêng tư và an ninh của tôi không bị xâm phạm — khác với khi dùng OpenAI, nơi dữ liệu phải chạy trên hệ thống của họ.”
 
-It's like OpenAI warning you not to eat at a restaurant because they might spy on your conversation, while ignoring the fact that you can actually take their recipe and cook at home. Who's listening to you in your own kitchen?
+Nó giống như OpenAI cảnh báo bạn đừng ăn ở một nhà hàng vì họ có thể nghe lén cuộc trò chuyện, trong khi lại bỏ qua thực tế là bạn có thể mang công thức của họ về và nấu ở nhà. Ai đang nghe lén bạn trong chính căn bếp của bạn?
 
-## DeepSeek's Innovations and Open Approach
+## Đổi mới của DeepSeek và cách tiếp cận “mở”
 
-What makes DeepSeek particularly remarkable isn't just their models' performance but their commitment to open research and innovation. In the past year alone, DeepSeek published 12 research papers detailing their training methods and technological breakthroughs.
+Điều làm DeepSeek đáng chú ý không chỉ là hiệu năng mô hình mà còn là cam kết nghiên cứu và đổi mới theo hướng mở. Chỉ trong một năm qua, DeepSeek đã công bố 12 bài nghiên cứu mô tả chi tiết phương pháp huấn luyện và các đột phá công nghệ của họ.
 
-These innovations are especially impressive considering the constraints Chinese AI companies face. Due to export restrictions, Chinese researchers don't have access to the same high-bandwidth GPU connection technologies (like NVIDIA's NVLink) that Western companies enjoy.
+Những đổi mới này càng ấn tượng nếu tính đến các ràng buộc mà công ty AI Trung Quốc gặp phải. Do hạn chế xuất khẩu, nhà nghiên cứu Trung Quốc không có quyền truy cập vào các công nghệ kết nối GPU băng thông cao (như NVLink của NVIDIA) như các công ty phương Tây.
 
-DeepSeek has developed novel approaches to minimize data transfer between GPUs, creating groundbreaking techniques that benefit AI researchers worldwide – regardless of geopolitical boundaries.
+DeepSeek đã phát triển các cách tiếp cận mới để giảm tối đa việc truyền dữ liệu giữa các GPU, tạo ra các kỹ thuật đột phá có lợi cho nhà nghiên cứu AI toàn cầu — bất kể ranh giới địa chính trị.
 
-Their open-source contributions include:
-- Custom file systems optimized for AI training
-- Novel context compression techniques
-- Efficient token generation methods
+Đóng góp mã nguồn mở của họ bao gồm:
+- Hệ thống file tuỳ biến tối ưu cho huấn luyện AI
+- Kỹ thuật nén ngữ cảnh (context compression) mới
+- Phương pháp sinh token hiệu quả
 
-This level of transparency stands in stark contrast to the increasingly closed nature of most Western AI labs, including OpenAI itself.
+Mức độ minh bạch này tương phản mạnh với xu hướng ngày càng “đóng” của nhiều lab AI phương Tây, bao gồm cả chính OpenAI.
 
-## The Irony of "Open" AI
+## Sự mỉa mai của AI “Open”
 
-Perhaps the most striking aspect of this controversy is the irony of a company named "OpenAI" advocating for restrictions on genuinely open AI research. While OpenAI has largely abandoned its original open-source mission (now reflected only in its name), DeepSeek has emerged as possibly "the most open AI company ever made."
+Có lẽ điểm “đắt” nhất của tranh cãi này là sự mỉa mai: một công ty tên “OpenAI” lại kêu gọi hạn chế nghiên cứu AI thực sự mở. Trong khi OpenAI phần lớn đã rời xa sứ mệnh mã nguồn mở ban đầu (giờ chỉ còn phản chiếu trong cái tên), DeepSeek lại nổi lên như có thể là “công ty AI mở nhất từng được tạo ra”.
 
-Industry observers note that Meta has been unusually quiet about their Llama models recently, with rumors suggesting they're rebuilding much of their technology internally after seeing DeepSeek's success. This speaks volumes about the quality and impact of DeepSeek's open innovations.
+Một số người trong ngành cũng chỉ ra Meta gần đây khá im ắng về Llama, với tin đồn rằng họ đang xây lại nhiều thứ nội bộ sau khi thấy DeepSeek thành công. Điều này nói rất nhiều về chất lượng và tác động của các đổi mới “mở” từ DeepSeek.
 
-Meanwhile, companies like Mistral AI, which position themselves as open alternatives, still maintain significant restrictions:
-- Their models often can't be run outside their infrastructure without substantial licensing fees
-- They don't open-source "the interesting stuff"
-- There's no way to host their models as efficiently as they do internally
+Trong khi đó, các công ty như Mistral AI — tự định vị như lựa chọn “mở” — vẫn duy trì nhiều hạn chế:
+- Mô hình của họ thường không thể chạy ngoài hạ tầng của họ nếu không trả phí cấp phép đáng kể
+- Họ không open-source “phần hay ho”
+- Không có cách nào host mô hình hiệu quả như cách họ làm nội bộ
 
-I actually also had a "podcast" with Google's NotebookLM agents regarding this very conversation and this was one of the main topics of the conversation, you can [watch it here](https://www.linkedin.com/feed/update/urn:li:activity:7307229930675654656/) if you are curious
+Mình cũng từng có một “podcast” với các agent NotebookLM của Google về đúng cuộc trò chuyện này và đây là một chủ đề chính. Nếu bạn tò mò, bạn có thể [xem ở đây](https://www.linkedin.com/feed/update/urn:li:activity:7307229930675654656/).
 
-It's like claiming your restaurant has an "open kitchen" because customers can peek through a tiny window, while your competitor is literally handing out all their recipes and cooking techniques for free.
+Nó giống như việc bạn nói nhà hàng của mình có “bếp mở” vì khách có thể nhìn qua một khe cửa sổ nhỏ, trong khi đối thủ thì phát miễn phí toàn bộ công thức và kỹ thuật nấu.
 
-## The Reality Behind DeepSeek
+## Sự thật phía sau DeepSeek
 
-Contrary to characterizations as a government operation, DeepSeek appears to have originated from private sector innovation. Many team members reportedly have backgrounds in cryptocurrency and were initially "just looking for things to do with their GPUs" when GPU mining became less profitable.
+Trái với cách mô tả kiểu “đội quân chính phủ”, DeepSeek có vẻ bắt nguồn từ đổi mới khu vực tư. Nhiều thành viên đội ngũ được cho là xuất thân từ crypto và ban đầu “chỉ đang tìm việc gì đó để làm với GPU” khi đào coin trở nên kém lợi nhuận.
 
-As one analysis points out: "This isn't some government plant... No one expected DeepSeek to be as good as it is or to have found the success that they found – certainly not China, certainly not us, possibly not even them."
+Như một phân tích nhận xét: “Đây không phải ‘cây cắm’ của chính phủ… Không ai ngờ DeepSeek lại tốt đến vậy hay đạt được thành công như thế — chắc chắn không phải Trung Quốc, chắc chắn không phải chúng ta, có lẽ thậm chí không phải họ.”
 
-If you wish to truly explore some of DeepSeek's amazing contributions to the AI space, check out this great video on it (not affiliated as always):
+Nếu bạn muốn khám phá kỹ hơn một số đóng góp tuyệt vời của DeepSeek cho AI, xem video này (như mọi khi, không liên quan lợi ích):
 
 ![A great video explaining DeepSeek's contributions to AI](https://www.youtube.com/watch?v=0VLAoVGf_74)
 
-The proposal acknowledges this reality in a single line, noting: "There isn't any clear link between the Chinese government and DeepSeek" – a statement that seems to undermine the core premise of their entire argument.
+Thú vị là chính đề xuất cũng thừa nhận điều này trong một dòng: “Không có mối liên hệ rõ ràng giữa chính phủ Trung Quốc và DeepSeek” — nghe như tự làm suy yếu tiền đề cốt lõi của cả lập luận.
 
-## The Real Concerns
+## Mối lo thật sự
 
-While national security and privacy considerations in AI development are legitimate concerns, the specific proposal to ban DeepSeek's models (rather than just placing restrictions on their APIs or cloud services) strikes many as overreaching.
+An ninh quốc gia và quyền riêng tư trong phát triển AI là mối quan tâm hợp lý. Tuy nhiên, đề xuất cấm mô hình DeepSeek (thay vì chỉ hạn chế API hoặc dịch vụ cloud) khiến nhiều người thấy là “quá tay”.
 
-The suggestion that individuals should be fined for simply downloading these models seems particularly extreme, akin to "Apple's weird legal cases where they start suing people for importing motherboards to replace broken ones on phones because they had an Apple logo on it."
+Gợi ý rằng cá nhân có thể bị phạt chỉ vì tải mô hình về máy nghe đặc biệt cực đoan, giống như “những vụ kiện kỳ quặc của Apple khi họ bắt đầu kiện người ta vì nhập bo mạch chủ để thay cho điện thoại hỏng chỉ vì có logo Apple trên đó.”
 
-A more nuanced approach might involve:
-- Regulations on API access and cloud services
-- Data protection requirements for cross-border AI services
-- Promoting domestic open-source alternatives
-- International cooperation on AI safety standards
+Một hướng tiếp cận tinh tế hơn có thể bao gồm:
+- Quy định về quyền truy cập API và dịch vụ cloud
+- Yêu cầu bảo vệ dữ liệu cho dịch vụ AI xuyên biên giới
+- Khuyến khích các lựa chọn mã nguồn mở nội địa
+- Hợp tác quốc tế về tiêu chuẩn an toàn AI
 
-## The Road Ahead
+## Chặng đường phía trước
 
-As AI capabilities continue to advance globally, finding the right balance between openness, innovation, and security will be crucial. The tension between OpenAI and DeepSeek represents more than just corporate rivalry – it highlights fundamental questions about how AI development should proceed in an increasingly multi-polar world.
+Khi năng lực AI tiếp tục tăng trên phạm vi toàn cầu, việc tìm điểm cân bằng giữa tính mở, đổi mới, và an ninh sẽ cực kỳ quan trọng. Căng thẳng giữa OpenAI và DeepSeek không chỉ là cạnh tranh công ty — nó nêu bật câu hỏi nền tảng về việc phát triển AI nên đi theo hướng nào trong một thế giới ngày càng đa cực.
 
-For AI enthusiasts and researchers, the silver lining may be that competition drives innovation. OpenAI's GPT-3.5 Mini has been praised as "an incredible model" that many professionals rely on for solving complex problems, while GPT-4.5 represents "a great step in the right direction."
+Với người đam mê AI và giới nghiên cứu, “điểm sáng” có thể là cạnh tranh thúc đẩy đổi mới. GPT-3.5 Mini của OpenAI được khen là “một mô hình tuyệt vời” mà nhiều người dùng chuyên nghiệp dựa vào để giải bài toán khó, trong khi GPT-4.5 được xem là “một bước đi đúng hướng”.
 
-Similarly, DeepSeek's contributions to open AI research benefit the entire field, regardless of where you stand on the geopolitical spectrum.
+Tương tự, đóng góp của DeepSeek cho nghiên cứu AI mở mang lợi ích cho cả ngành, bất kể bạn đứng ở phía nào trên bản đồ địa chính trị.
 
-## Conclusion
+## Kết luận
 
-The controversy surrounding OpenAI's proposal to restrict DeepSeek models reveals the complex intersection of technology, commerce, and geopolitics in today's AI landscape. While concerns about privacy, security, and international competition are valid, many in the AI community worry that overly restrictive approaches could hinder genuine innovation.
+Tranh cãi quanh đề xuất hạn chế DeepSeek của OpenAI cho thấy giao điểm phức tạp giữa công nghệ, thương mại, và địa chính trị trong bức tranh AI hiện tại. Dù lo ngại về quyền riêng tư, an ninh và cạnh tranh quốc tế là hợp lệ, nhiều người trong cộng đồng AI sợ rằng các cách tiếp cận quá hạn chế có thể bóp nghẹt đổi mới thực sự.
 
-As Theo accurately noted: "Deep seek's work should not be talked down on, it certainly should not be banned from the US, and it's sad to see a company like OpenAI doing what they're doing here."
+Như Theo nói rất đúng: “Công sức của DeepSeek không nên bị xem nhẹ, chắc chắn không nên bị cấm ở Mỹ, và thật buồn khi thấy một công ty như OpenAI lại làm như vậy.”
 
-The true spirit of "open" AI may lie not in a company's name but in its willingness to share knowledge, techniques, and innovations with the global research community. As the field continues to evolve, perhaps we'll see a renewed emphasis on collaboration alongside the inevitable competition.
+Tinh thần thật sự của AI “open” có lẽ không nằm ở cái tên công ty, mà nằm ở việc họ sẵn sàng chia sẻ kiến thức, kỹ thuật, và đổi mới với cộng đồng nghiên cứu toàn cầu tới mức nào. Khi lĩnh vực tiếp tục tiến hoá, biết đâu chúng ta sẽ thấy sự nhấn mạnh trở lại vào hợp tác — song song với cạnh tranh vốn là điều không tránh khỏi.
 
-After all, as the saying goes, a rising tide lifts all boats – even if some of those boats are flying different flags.
+Sau tất cả, như người ta nói: thuỷ triều lên thì mọi con thuyền đều được nâng lên — dù một số con thuyền đang treo những lá cờ khác nhau.
+

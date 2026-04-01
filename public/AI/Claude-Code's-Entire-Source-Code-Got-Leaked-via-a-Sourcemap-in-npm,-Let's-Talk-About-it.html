@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Source code Claude Code bị leak qua sourcemap trên npm - cùng mổ xẻ</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="TIENLE"/><meta property="og:title" content="Source code Claude Code bị leak qua sourcemap trên npm - cùng mổ xẻ"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Source code Claude Code bị leak qua sourcemap trên npm - cùng mổ xẻ"/><meta name="twitter:description" content="Hôm nay (31/03/2026) — Chaofan Shou trên X phát hiện một thứ mà Anthropic chắc chắn không muốn cả thế giới nhìn thấy: toàn bộ source code của Claude Code (CLI coding chính thức của Anthropic) ..."/><meta property="og:description" content="Hôm nay (31/03/2026) — Chaofan Shou trên X phát hiện một thứ mà Anthropic chắc chắn không muốn cả thế giới nhìn thấy: toàn bộ source code của Claude Code (CLI coding chính thức của Anthropic) ..."/><meta property="og:image:type" content="image/webp"/><meta property="og:image:alt" content="Hôm nay (31/03/2026) — Chaofan Shou trên X phát hiện một thứ mà Anthropic chắc chắn không muốn cả thế giới nhìn thấy: toàn bộ source code của Claude Code (CLI coding chính thức của Anthropic) ..."/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:url" content="https://tienlee0310.github.io/my-blog/static/social-images/content-AI-Claude Code's Entire Source Code Got Leaked via a Sourcemap in npm, Let's Talk About it.md.webp"/><meta name="twitter:image" content="https://tienlee0310.github.io/my-blog/static/social-images/content-AI-Claude Code's Entire Source Code Got Leaked via a Sourcemap in npm, Let's Talk About it.md.webp"/><meta property="og:image" content="https://tienlee0310.github.io/my-blog/static/social-images/content-AI-Claude Code's Entire Source Code Got Leaked via a Sourcemap in npm, Let's Talk About it.md.webp"/><meta property="twitter:domain" content="tienlee0310.github.io/my-blog"/><meta property="og:url" content="https://tienlee0310.github.io/my-blog/AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it"/><meta property="twitter:url" content="https://tienlee0310.github.io/my-blog/AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Hôm nay (31/03/2026) — Chaofan Shou trên X phát hiện một thứ mà Anthropic chắc chắn không muốn cả thế giới nhìn thấy: toàn bộ source code của Claude Code (CLI coding chính thức của Anthropic) ..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">TIENLE</a></h2><div class="spacer mobile-only"></div><div class="search"><button class="search-button" id="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><button class="darkmode" id="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[{&quot;path&quot;:&quot;AI&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Business&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Data-Science&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Gaming&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Music&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Post-Extended&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Projects&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Reflections&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Social-Media&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Technology&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;Tutorials&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;TV&quot;,&quot;collapsed&quot;:true}]" aria-controls="explorer-content" aria-expanded="false"><h2>Blogs</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="AI"><button class="folder-button"><span class="folder-title">AI</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="AI"><li><a href="../AI/Can-AI-Understand-Emotions-The-Limits-of-Sentiment-Analysis" data-for="AI/Can-AI-Understand-Emotions-The-Limits-of-Sentiment-Analysis">AI có thể hiểu cảm xúc không? Giới hạn của phân tích cảm xúc (sentiment analysis)</a></li><li><a href="../AI/Generative-AI-and-the-Copyright-System---The-Legal-Gray-Area" data-for="AI/Generative-AI-and-the-Copyright-System---The-Legal-Gray-Area">AI tạo sinh và hệ thống bản quyền - Vùng xám pháp lý</a></li><li><a href="../AI/OpenAI-CEO-Draws-Line-Between-'Regular-Cute'-and-'Gay-Cute'-for-AI-Models" data-for="AI/OpenAI-CEO-Draws-Line-Between-'Regular-Cute'-and-'Gay-Cute'-for-AI-Models">CEO OpenAI nói về “cute thường” và “cute gay” của AI (tiêu đề câu view)</a></li><li><a href="../AI/The-AI-Models-Race-to-The-Bottom-in-2025" data-for="AI/The-AI-Models-Race-to-The-Bottom-in-2025">Cuộc đua “về 0” của các mô hình AI năm 2025</a></li><li><a href="../AI/DeepSeek-R1-vs-ChatGPT-Why-This-Isn't-a-Zero-Sum-Game" data-for="AI/DeepSeek-R1-vs-ChatGPT-Why-This-Isn't-a-Zero-Sum-Game">DeepSeek R1 vs ChatGPT: Vì sao đây không phải trò chơi được-mất (zero-sum)</a></li><li><a href="../AI/DeepSeek-vs.-ChatGPT---The-AI-Chess-Showdown-That-Broke-the-Internet" data-for="AI/DeepSeek-vs.-ChatGPT---The-AI-Chess-Showdown-That-Broke-the-Internet">DeepSeek vs. ChatGPT - Ván cờ AI làm “nổ tung” Internet</a></li><li><a href="../AI/How-Google-Gemini-2.0-Caught-Up-in-the-AI-Race" data-for="AI/How-Google-Gemini-2.0-Caught-Up-in-the-AI-Race">Google Gemini 2.0 đã bắt kịp cuộc đua AI như thế nào</a></li><li><a href="../AI/Roy-Lee's-Interview-Coder---Cheating-or-a-Wake-Up-Call" data-for="AI/Roy-Lee's-Interview-Coder---Cheating-or-a-Wake-Up-Call">Interview Coder của Roy Lee: Gian lận hay hồi chuông cảnh tỉnh?</a></li><li><a href="../AI/I-Got-Early-Access-to-Manus-AI---Let's-Talk-About-it" data-for="AI/I-Got-Early-Access-to-Manus-AI---Let's-Talk-About-it">Mình được dùng sớm Manus AI - nói chuyện chút nhé</a></li><li><a href="../AI/How-People-use-ChatGPT-and-Why-You-Should-Care" data-for="AI/How-People-use-ChatGPT-and-Why-You-Should-Care">Mọi người dùng ChatGPT như thế nào (và vì sao bạn nên quan tâm)</a></li><li><a href="../AI/OpenAI-vs-DeepSeek---The-Battle-for-AI-Dominance-and-the-Meaning-of-Open" data-for="AI/OpenAI-vs-DeepSeek---The-Battle-for-AI-Dominance-and-the-Meaning-of-Open">OpenAI vs DeepSeek - Cuộc chiến giành “ngôi” AI và ý nghĩa của chữ &quot;Open&quot;</a></li><li><a href="../AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it" data-for="AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it">Source code Claude Code bị leak qua sourcemap trên npm - cùng mổ xẻ</a></li><li><a href="../AI/The-Big-Tech-Data-Dilemma---When-Your-Life-Becomes-AI-Training-Material" data-for="AI/The-Big-Tech-Data-Dilemma---When-Your-Life-Becomes-AI-Training-Material">Thế tiến thoái lưỡng nan dữ liệu của Big Tech - Khi cuộc đời bạn trở thành “nguyên liệu” huấn luyện AI</a></li><li><a href="../AI/Turn-this-into-Ghibli---How-OpenAI-commited-the-largest-identity-theft-in-the-entire-history-of-art" data-for="AI/Turn-this-into-Ghibli---How-OpenAI-commited-the-largest-identity-theft-in-the-entire-history-of-art">Turn this into Ghibli - Khi OpenAI cướp danh tính lớn nhất lịch sử nghệ thuật?</a></li><li><a href="../AI/ChatGPT-Wrappers---Revolutionizing-User-Experience-or-Hiding-Limitations" data-for="AI/ChatGPT-Wrappers---Revolutionizing-User-Experience-or-Hiding-Limitations">Wrapper cho ChatGPT: Cách mạng hoá trải nghiệm hay che giấu giới hạn?</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Business"><button class="folder-button"><span class="folder-title">Business</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Business"><li><a href="../Business/Sustainability-as-a-Business-Model" data-for="Business/Sustainability-as-a-Business-Model">Sustainability as a Business Model: A Competitive Edge, Not Just an Ethical Choice</a></li><li><a href="../Business/The-No-Code-Revolution" data-for="Business/The-No-Code-Revolution">The No-Code Revolution: Empowering Entrepreneurs Without Coding Skills</a></li><li><a href="../Business/Why-Most-AI-Startups-Fail" data-for="Business/Why-Most-AI-Startups-Fail">Why Most AI Startups Fail: Lessons from the Trenches</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Data-Science"><button class="folder-button"><span class="folder-title">Data-Science</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Data-Science"><li><a href="../Data-Science/Beyond-Traditional-Dashboards---The-Future-of-Data-Visualization" data-for="Data-Science/Beyond-Traditional-Dashboards---The-Future-of-Data-Visualization">Beyond Traditional Dashboards: The Future of Data Visualization</a></li><li><a href="../Data-Science/Demystifying-Data-Science-Jargon-A-Beginner's-Guide" data-for="Data-Science/Demystifying-Data-Science-Jargon-A-Beginner's-Guide">Demystifying Data Science Jargon&quot; A Beginner's Guide</a></li><li><a href="../Data-Science/Unlocking-the-Potential-Data-Science-in-Healthcare" data-for="Data-Science/Unlocking-the-Potential-Data-Science-in-Healthcare">Unlocking the Potential - Data Science in Healthcare</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Gaming"><button class="folder-button"><span class="folder-title">Gaming</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Gaming"><li><a href="../Gaming/Cyberpunk-2077--From-Most-Anticipated-to-Bug-Plagued-Launch-and-Redemption" data-for="Gaming/Cyberpunk-2077--From-Most-Anticipated-to-Bug-Plagued-Launch-and-Redemption">Cyberpunk 2077: From Most Anticipated to Bug-Plagued Launch and Redemption</a></li><li><a href="../Gaming/The-Evolution-of-Gaming-From-Pastimes-to-Powerful-Industries" data-for="Gaming/The-Evolution-of-Gaming-From-Pastimes-to-Powerful-Industries">The Evolution of Gaming: From Pastimes to Powerful Industries</a></li><li><a href="../Gaming/The-Nostalgia-Factor-in-Gaming-Why-Classic-Titles-Still-Matter" data-for="Gaming/The-Nostalgia-Factor-in-Gaming-Why-Classic-Titles-Still-Matter">The Nostalgia Factor in Gaming: Why Classic Titles Still Matter</a></li><li><a href="../Gaming/Undertale-Genocide---How-to-Make-the-Player-Feel-Bad-For-Their-Choices" data-for="Gaming/Undertale-Genocide---How-to-Make-the-Player-Feel-Bad-For-Their-Choices">Undertale Genocide - How to Make the Player Feel Bad For Their Choices</a></li></ul></div></li><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Music"><button class="folder-button"><span class="folder-title">Music</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Music"><li><a href="../Music/Event-Ticketing---The-Untapped-Industry-with-Deeply-Flawed-Competition" data-for="Music/Event-Ticketing---The-Untapped-Industry-with-Deeply-Flawed-Competition">Event Ticketing - The Untapped Industry with Deeply Flawed Competition</a></li><li><a href="../Music/The-Best-Way-to-Learn-an-Instrument---Throw-Yourself-into-it" data-for="Music/The-Best-Way-to-Learn-an-Instrument---Throw-Yourself-into-it">The Best Way to Learn an Instrument - Throw Yourself into it</a></li><li><a href="../Music/The-TikTokification-of-Music---Unraveling-the-Complex-Impact-of-Social-Media" data-for="Music/The-TikTokification-of-Music---Unraveling-the-Complex-Impact-of-Social-Media">The TikTokification of Music: Unraveling the Complex Impact of Social Media</a></li><li><a href="../Music/The-Ultimate-Guide-to-Buying-Your-First-Guitar" data-for="Music/The-Ultimate-Guide-to-Buying-Your-First-Guitar">The Ultimate Guide to Buying Your First Guitar</a></li><li><a href="../Music/The-Weeknd's-Hurry-Up-Tomorrow--A-Perfect-Goodbye-to-an-Iconic-Era" data-for="Music/The-Weeknd's-Hurry-Up-Tomorrow--A-Perfect-Goodbye-to-an-Iconic-Era">The Weeknd's Hurry Up Tomorrow- A Perfect Goodbye to an Iconic Era</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Post-Extended"><button class="folder-button"><span class="folder-title">Post-Extended</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Post-Extended"><li><a href="../Post-Extended/How-to-Statistically-Never-Lose-in-Wordle-Again" data-for="Post-Extended/How-to-Statistically-Never-Lose-in-Wordle-Again">How to Statistically Never Lose in Wordle Again</a></li><li><a href="../Post-Extended/I-Read-Sam-Bhagwat's-AI-Agents-Bible-So-You-Don't-Have-To" data-for="Post-Extended/I-Read-Sam-Bhagwat's-AI-Agents-Bible-So-You-Don't-Have-To">I Read Sam Bhagwat's AI Agents Bible So You Don't Have To (But Probably Should)</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Projects"><button class="folder-button"><span class="folder-title">Projects</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Projects"><li><a href="../Projects/AsianMOM---A-WebGPU-Powered-AI-That-Roasts-You-Like-an-Asian-Mother" data-for="Projects/AsianMOM---A-WebGPU-Powered-AI-That-Roasts-You-Like-an-Asian-Mother">AsianMOM: A WebGPU-Powered AI That Roasts You Like an Asian Mother</a></li><li><a href="../Projects/How-I-Made-DOOM-Run-Inside-a-GitHub-Readme" data-for="Projects/How-I-Made-DOOM-Run-Inside-a-GitHub-Readme">How I Made DOOM Run Inside a GitHub Readme</a></li><li><a href="../Projects/How-I-Managed-To-Get-Doom-In-A-QR-Code" data-for="Projects/How-I-Managed-To-Get-Doom-In-A-QR-Code">How I Managed To Get Doom In A QR Code</a></li><li><a href="../Projects/How-I-Managed-To-Make-HTML-Game-Compression-So-Much-Better" data-for="Projects/How-I-Managed-To-Make-HTML-Game-Compression-So-Much-Better">How I Managed To Make HTML Game Compression So Much Better</a></li><li><a href="../Projects/How-I-Spent-Three-Nights-Solving-Listen-Labs-Berghain-Challenge" data-for="Projects/How-I-Spent-Three-Nights-Solving-Listen-Labs-Berghain-Challenge">How I Spent Three Nights Solving Listen Labs Berghain Challenge</a></li><li><a href="../Projects/Tackling-AI-Generated-Spam-in-LinkedIn-Comments-with-ORCUS-AI" data-for="Projects/Tackling-AI-Generated-Spam-in-LinkedIn-Comments-with-ORCUS-AI">Tackling AI-Generated Spam in LinkedIn Comments with ORCUS AI</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Reflections"><button class="folder-button"><span class="folder-title">Reflections</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Reflections"><li><a href="../Reflections/Clawdbot-will-be-dead-in-a-month" data-for="Reflections/Clawdbot-will-be-dead-in-a-month">Clawdbot will be dead in a month</a></li><li><a href="../Reflections/Prompting-People" data-for="Reflections/Prompting-People">Prompting People</a></li><li><a href="../Reflections/The-Bubble-is-Not-What-You-Think" data-for="Reflections/The-Bubble-is-Not-What-You-Think">The Bubble is Not What You Think</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Social-Media"><button class="folder-button"><span class="folder-title">Social-Media</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Social-Media"><li><a href="../Social-Media/Hello-World" data-for="Social-Media/Hello-World">Hello World</a></li><li><a href="../Social-Media/How-Reddit-Became-Social-Media's-Unfiltered-Opinion-Hub" data-for="Social-Media/How-Reddit-Became-Social-Media's-Unfiltered-Opinion-Hub">How Reddit Became Social Media's Unfiltered Opinion Hub</a></li><li><a href="../Social-Media/How-the-Internet-Shapes-Modern-Opinions" data-for="Social-Media/How-the-Internet-Shapes-Modern-Opinions">How the Internet Shapes Modern Opinions</a></li><li><a href="../Social-Media/rPlace---The-Internet's-Greatest-Communal-Art-Experiment" data-for="Social-Media/rPlace---The-Internet's-Greatest-Communal-Art-Experiment">r/Place - The Internet's Greatest Communal Art Experiment</a></li><li><a href="../Social-Media/The-Duality-of-Social-Media-Connecting-the-World-or-Dividing-Opinions" data-for="Social-Media/The-Duality-of-Social-Media-Connecting-the-World-or-Dividing-Opinions">The Duality of Social Media Connecting the World or Dividing Opinions?</a></li><li><a href="../Social-Media/The-Rise-and-Fall-of-BeReal-A-Tale-of-Social-Media's-Fleeting-Nature" data-for="Social-Media/The-Rise-and-Fall-of-BeReal-A-Tale-of-Social-Media's-Fleeting-Nature">The Rise and Fall of BeReal: A Tale of Social Media's Fleeting Nature</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Technology"><button class="folder-button"><span class="folder-title">Technology</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Technology"><li><a href="../Technology/A-Dummy-Proof-Guide-to-Git-and-GitHub" data-for="Technology/A-Dummy-Proof-Guide-to-Git-and-GitHub">A Dummy-Proof Guide to Git and GitHub</a></li><li><a href="../Technology/I-Used-a-Firefox-Based-Browser-for-a-Week-and-I-Hated-it" data-for="Technology/I-Used-a-Firefox-Based-Browser-for-a-Week-and-I-Hated-it">I Used a Firefox Based Browser for a Week and I Hated it</a></li><li><a href="../Technology/Majorana-1---Why-Quantum-Computing-Matters-Now" data-for="Technology/Majorana-1---Why-Quantum-Computing-Matters-Now">Majorana 1 - Why Quantum Computing Matters Now</a></li><li><a href="../Technology/QR-Codes-and-Malware---The-Hidden-Dangers-in-2025" data-for="Technology/QR-Codes-and-Malware---The-Hidden-Dangers-in-2025">QR Codes and Malware - The Hidden Dangers in 2025</a></li><li><a href="../Technology/Untitled" data-for="Technology/Untitled">Why I Switched to the Nothing Phone 3a Pro and Can’t Stop Talking About It</a></li><li><a href="../Technology/Why-Using-Machine-Learning-for-Stock-Market-isn't-a-Great-Idea" data-for="Technology/Why-Using-Machine-Learning-for-Stock-Market-isn't-a-Great-Idea">Why Using Machine Learning for Stock Market isn't a Great Idea</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="Tutorials"><button class="folder-button"><span class="folder-title">Tutorials</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="Tutorials"><li><a href="../Tutorials/Character-Conversions-with-AI---Wan-2.2-Animate" data-for="Tutorials/Character-Conversions-with-AI---Wan-2.2-Animate">Character Conversions with AI - Wan 2.2 Animate</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="TV"><button class="folder-button"><span class="folder-title">TV</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="TV"><li><a href="../TV/The-Idol---The-Weeknd's-Show-with-its-Mistakes-and-Missed-Opportunities" data-for="TV/The-Idol---The-Weeknd's-Show-with-its-Mistakes-and-Missed-Opportunities">The Idol - The Weeknd's Show with its Mistakes and Missed Opportunities</a></li></ul></div></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../AI/">AI</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Source code Claude Code bị leak qua sourcemap trên npm - cùng mổ xẻ</a></div></nav><h1 class="article-title">Source code Claude Code bị leak qua sourcemap trên npm - cùng mổ xẻ</h1><p show-comma="true" class="content-meta"><time datetime="2026-03-31T00:00:00.000Z">Mar 31, 2026</time><span>17 min read</span></p><ul class="tags"><li><a href="../tags/AI" class="internal tag-link">AI</a></li><li><a href="../tags/ChatGPT" class="internal tag-link">ChatGPT</a></li><li><a href="../tags/Social-Media" class="internal tag-link">Social-Media</a></li><li><a href="../tags/Artificial-Intelligence" class="internal tag-link">Artificial-Intelligence</a></li><li><a href="../tags/GenerativeAI" class="internal tag-link">GenerativeAI</a></li><li><a href="../tags/Internet" class="internal tag-link">Internet</a></li><li><a href="../tags/OpenAI" class="internal tag-link">OpenAI</a></li><li><a href="../tags/Claude" class="internal tag-link">Claude</a></li><li><a href="../tags/Anthropic" class="internal tag-link">Anthropic</a></li></ul></div></div><article class="popover-hint"><p>Hôm nay (31/03/2026) — Chaofan Shou trên X phát hiện một thứ mà Anthropic chắc chắn không muốn cả thế giới nhìn thấy: <strong>toàn bộ source code</strong> của Claude Code (CLI coding chính thức của Anthropic) đang “lộ thiên” trên npm registry thông qua một file <strong>sourcemap</strong> được bundle vào package đã publish.</p>
+<p><a href="https://raw.githubusercontent.com/kuberwastaken/claude-code/main/public/leak-tweet.png" class="external"><img src="https://raw.githubusercontent.com/kuberwastaken/claude-code/main/public/leak-tweet.png" alt="The tweet announcing the leak"/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://github.com/Kuberwastaken/claude-code" class="external">Mình đã giữ một bản backup code đó trên GitHub ở đây<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> nhưng đó chưa phải phần vui nhất.</p>
+<p>Hãy đào sâu: trong đó có gì, leak xảy ra thế nào, và quan trọng nhất là những thứ giờ ta biết — vốn chưa từng được định để public.</p>
+<h2 id="vì-sao-chuyện-này-xảy-ra-được">Vì sao chuyện này xảy ra được?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vì-sao-chuyện-này-xảy-ra-được" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Đây là đoạn khiến mình phải kiểu “…thiệt luôn?”</p>
+<p>Khi bạn publish package JavaScript/TypeScript lên npm, build toolchain thường sinh ra <strong>source map files</strong> (file <code>.map</code>). Chúng là cây cầu giữa code production đã minify/bundle và source gốc — để khi production crash, stack trace chỉ đúng vào <em>dòng code thật</em> trong <em>file gốc</em>, chứ không phải “line 1, column 48293” của một cục minified blob.</p>
+<p>Nhưng “phần vui” là: <strong>sourcemap chứa source code gốc</strong>. Đúng nghĩa đen. Source thô, nhét thành string trong một file JSON.</p>
+<p>Cấu trúc <code>.map</code> trông như thế này:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;version&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;sources&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;../src/main.tsx&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;../src/tools/BashTool.ts&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;...&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">],</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;sourcesContent&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;// The ENTIRE original source code of each file&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;...&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">],</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;mappings&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;AAAA,SAAS,OAAO...&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p>Cái mảng <code>sourcesContent</code> kia? Đó là tất cả.
+Mọi file. Mọi comment. Mọi hằng số nội bộ. Mọi system prompt. Tất cả. Nằm trơ trọi trong JSON mà npm phục vụ cho bất kỳ ai chạy <code>npm pack</code> hoặc thậm chí chỉ cần xem nội dung package.</p>
+<p>Đây không phải vector tấn công mới. Nó từng xảy ra và thật ra sẽ còn xảy ra.</p>
+<p>Sai lầm thường giống nhau: ai đó quên thêm <code>*.map</code> vào <code>.npmignore</code> hoặc không cấu hình bundler để bỏ sourcemap ở build production. Với bundler của Bun (Claude Code dùng), sourcemap được tạo mặc định trừ khi bạn tắt rõ ràng.</p>
+<p><a href="https://raw.githubusercontent.com/kuberwastaken/claude-code/main/public/claude-files.png" class="external"><img src="https://raw.githubusercontent.com/kuberwastaken/claude-code/main/public/claude-files.png" alt="Claude Code source files exposed in npm package"/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Điều hài nhất là trong code có hẳn một hệ thống tên <a href="#undercover-mode--do-not-blow-your-cover" class="internal alias">“Undercover Mode”</a> để ngăn lộ thông tin nội bộ của Anthropic.</p>
+<p>Họ xây cả một subsystem để AI không vô tình lộ codename nội bộ trong git commit… rồi lại ship toàn bộ source trong một file <code>.map</code> — có khi cũng do Claude.</p>
+<hr/>
+<h2 id="claude-code-bên-trong-trông-ra-sao">Claude Code “bên trong” trông ra sao?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#claude-code-bên-trong-trông-ra-sao" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Nếu bạn đang sống dưới một tảng đá, Claude Code là CLI chính thức của Anthropic để code với Claude và cũng là AI coding agent phổ biến nhất.</p>
+<p>Nhìn bên ngoài, nó như một CLI bóng bẩy nhưng có vẻ “đơn giản”.</p>
+<p>Nhìn bên trong: một entry point <strong>785KB <a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/cli/src/main.rs" class="external"><code>main.tsx</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></strong>, một React terminal renderer tuỳ biến, 40+ tool, hệ orchestration đa-agent, một engine “gom trí nhớ” chạy nền tên “dream”, và nhiều thứ khác.</p>
+<p>Enough yapping — đây là vài thứ trong source mà mình thấy thật sự cool sau một buổi chiều đào:</p>
+<hr/>
+<h2 id="buddy---tamagotchi-trong-terminal-của-bạn">BUDDY - Tamagotchi trong terminal của bạn<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#buddy---tamagotchi-trong-terminal-của-bạn" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Mình không bịa.</p>
+<p>Claude Code có hẳn một <strong>hệ pet kiểu Tamagotchi</strong> tên “Buddy”. Một <strong>deterministic gacha system</strong> với độ hiếm loài, shiny variant, chỉ số sinh theo thủ tục, và “mô tả linh hồn” do Claude viết lúc nở lần đầu kiểu OpenClaw.</p>
+<p>Toàn bộ nằm trong <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates" class="external"><code>buddy/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> và bị khoá bởi compile-time feature flag <code>BUDDY</code>.</p>
+<h3 id="hệ-gacha">Hệ gacha<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hệ-gacha" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Loài của buddy được quyết định bởi <strong>Mulberry32 PRNG</strong>, một bộ sinh số giả ngẫu nhiên 32-bit nhanh, seed từ hash <code>userId</code> (kèm salt <code>'friend-2026-401'</code>):</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="typescript" data-theme="github-light github-dark"><code data-language="typescript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// Mulberry32 PRNG - deterministic, reproducible per-user</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> mulberry32</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">seed</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> number</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> number</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> function</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    seed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">|=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; seed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> seed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0x6D2B79F5</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Math.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">imul</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(seed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">^</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> seed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">>>></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 15</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> seed);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Math.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">imul</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">^</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">>>></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 7</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">61</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> t) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">^</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> t;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ((t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">^</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">>>></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 14</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">>>></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 4294967296</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p>Cùng user → luôn ra cùng buddy.</p>
+<h3 id="18-loài-được-che-trong-code">18 loài (được che trong code)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#18-loài-được-che-trong-code" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Tên loài bị giấu bằng mảng <code>String.fromCharCode()</code> — rõ ràng Anthropic không muốn nó bị search string ra. Decode ra, danh sách đầy đủ là:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Rarity</th><th>Species</th></tr></thead><tbody><tr><td><strong>Common</strong> (60%)</td><td>Pebblecrab, Dustbunny, Mossfrog, Twigling, Dewdrop, Puddlefish</td></tr><tr><td><strong>Uncommon</strong> (25%)</td><td>Cloudferret, Gustowl, Bramblebear, Thornfox</td></tr><tr><td><strong>Rare</strong> (10%)</td><td>Crystaldrake, Deepstag, Lavapup</td></tr><tr><td><strong>Epic</strong> (4%)</td><td>Stormwyrm, Voidcat, Aetherling</td></tr><tr><td><strong>Legendary</strong> (1%)</td><td>Cosmoshale, Nebulynx</td></tr></tbody></table></div>
+<p>Ngoài ra còn có <strong>1% shiny chance</strong> độc lập với rarity. Nên Shiny Legendary Nebulynx có xác suất <strong>0,01%</strong>. Dang.</p>
+<h3 id="stats-mắt-mũ-và-linh-hồn">Stats, mắt, mũ, và “linh hồn”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stats-mắt-mũ-và-linh-hồn" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Mỗi buddy được generate:</p>
+<ul>
+<li><strong>5 stats</strong>: <code>DEBUGGING</code>, <code>PATIENCE</code>, <code>CHAOS</code>, <code>WISDOM</code>, <code>SNARK</code> (0-100 mỗi stat)</li>
+<li><strong>6 kiểu mắt</strong> và <strong>8 lựa chọn mũ</strong> (một số bị khoá theo rarity)</li>
+<li><strong>Một “soul”</strong>: personality do Claude tạo khi nở lần đầu, viết “đúng vai”</li>
+</ul>
+<p>Sprite được render dưới dạng <strong>ASCII art</strong> cao 5 dòng, rộng 12 ký tự, có nhiều frame animation. Có idle animation, reaction animation, và nó ngồi cạnh prompt input.</p>
+<h3 id="lore">Lore<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lore" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Code nhắc 1–7/4/2026 như một <strong>teaser window</strong>, với launch đầy đủ khoá cho tháng 5/2026. Pet có system prompt hướng dẫn Claude:</p>
+<pre><code>A small {species} named {name} sits beside the user's input box and 
+occasionally comments in a speech bubble. You're not {name} - it's a 
+separate watcher.
+</code></pre>
+<p>Nên không chỉ cosmetic — buddy có personality riêng và có thể phản hồi khi bạn gọi tên. Mình thật sự mong họ ship nó.</p>
+<hr/>
+<h2 id="kairos---always-on-claude">KAIROS - “Always-On Claude”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kairos---always-on-claude" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Trong <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates" class="external"><code>assistant/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> có một mode tên <strong>KAIROS</strong>: một trợ lý Claude “luôn chạy”, không đợi bạn gõ. Nó quan sát, log, và <strong>chủ động</strong> làm gì đó khi thấy cần.</p>
+<p>Cái này bị khoá bởi feature flags <code>PROACTIVE</code> / <code>KAIROS</code> và hoàn toàn không có trong build public.</p>
+<h3 id="cách-nó-hoạt-động">Cách nó hoạt động<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cách-nó-hoạt-động" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>KAIROS duy trì <strong>append-only daily log files</strong> — ghi quan sát, quyết định, hành động xuyên ngày. Định kỳ nó nhận prompt <code>&lt;tick></code> để quyết định có chủ động làm gì hay im lặng.</p>
+<p>Hệ có <strong>15-second blocking budget</strong>: hành động chủ động nào chặn workflow người dùng quá 15 giây sẽ bị hoãn. Đây là cách Claude cố hữu ích mà không gây phiền.</p>
+<h3 id="brief-mode">Brief mode<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#brief-mode" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Khi KAIROS bật, có output mode đặc biệt tên <strong>Brief</strong>: phản hồi cực ngắn, phù hợp trợ lý luôn chạy mà không spam terminal. Kiểu khác nhau giữa bạn bè nói nhiều và trợ lý chuyên nghiệp chỉ nói khi có thứ đáng nói.</p>
+<h3 id="tool-độc-quyền">Tool “độc quyền”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tool-độc-quyền" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>KAIROS có tool mà Claude Code thường không có:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Tool</th><th>What It Does</th></tr></thead><tbody><tr><td><strong>SendUserFile</strong></td><td>Push files directly to the user (notifications, summaries)</td></tr><tr><td><strong>PushNotification</strong></td><td>Send push notifications to the user’s device</td></tr><tr><td><strong>SubscribePR</strong></td><td>Subscribe to and monitor pull request activity</td></tr></tbody></table></div>
+<hr/>
+<h2 id="ultraplan---phiên-planning-remote-30-phút">ULTRAPLAN - phiên planning remote 30 phút<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ultraplan---phiên-planning-remote-30-phút" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Cái này “wild” về mặt hạ tầng.</p>
+<p><strong>ULTRAPLAN</strong> là mode nơi Claude Code đẩy một task planning phức tạp lên <strong>remote Cloud Container Runtime (CCR) session</strong> chạy <strong>Opus 4.6</strong>, cho tối đa <strong>30 phút</strong> để nghĩ, và bạn duyệt kết quả trên browser.</p>
+<p>Luồng cơ bản:</p>
+<ol>
+<li>Claude Code phát hiện task cần planning sâu</li>
+<li>Nó spin up remote CCR session qua config <code>tengu_ultraplan_model</code></li>
+<li>Terminal hiển thị trạng thái polling — check mỗi <strong>3 giây</strong> để lấy kết quả</li>
+<li>UI trên browser cho phép bạn xem planning diễn ra và approve/reject</li>
+<li>Khi approve, có sentinel <code>__ULTRAPLAN_TELEPORT_LOCAL__</code> để “teleport” kết quả về terminal local</li>
+</ol>
+<hr/>
+<h2 id="dream-system---claude-mơ-thật">”Dream” System - Claude… mơ thật<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dream-system---claude-mơ-thật" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Đây là một trong những thứ cool nhất trong này.</p>
+<p>Claude Code có hệ <strong>autoDream</strong> (<a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates" class="external"><code>services/autoDream/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) — engine gom trí nhớ chạy nền dưới dạng <strong>forked subagent</strong>. Tên gọi rất có chủ ý. Claude đang… mơ.</p>
+<p>Điều này buồn cười vì <a href="https://github.com/Kuberwastaken/litmus" class="external">tuần trước mình cũng có ý tưởng tương tự cho LITMUS - OpenClaw subagents “leisure time” để đi tìm paper mới<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="three-gate-trigger">Three-gate trigger<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#three-gate-trigger" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Dream không chạy bừa. Nó có hệ trigger 3 cổng:</p>
+<ol>
+<li><strong>Time gate</strong>: 24 giờ kể từ lần mơ trước</li>
+<li><strong>Session gate</strong>: ít nhất 5 session kể từ lần mơ trước</li>
+<li><strong>Lock gate</strong>: lấy consolidation lock (tránh mơ song song)</li>
+</ol>
+<p>Phải qua cả 3. Tránh over-dreaming lẫn under-dreaming.</p>
+<h3 id="4-phase">4 phase<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-phase" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Khi chạy, dream đi qua 4 phase chặt theo prompt ở <a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/query/src/compact.rs" class="external"><code>consolidationPrompt.ts</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>:</p>
+<p><strong>Phase 1 - Orient</strong>: <code>ls</code> thư mục memory, đọc <code>MEMORY.md</code>, skim topic files cũ để biết cần cải thiện gì.</p>
+<p><strong>Phase 2 - Gather Recent Signal</strong>: tìm tín hiệu mới đáng lưu. Nguồn ưu tiên: daily logs → drifted memories → transcript search.</p>
+<p><strong>Phase 3 - Consolidate</strong>: viết/update memory files. Đổi ngày tương đối thành tuyệt đối. Xoá fact bị mâu thuẫn.</p>
+<p><strong>Phase 4 - Prune and Index</strong>: giữ <code>MEMORY.md</code> dưới 200 dòng và ~25KB. Bỏ pointer cũ. Giải quyết mâu thuẫn.</p>
+<p>Prompt còn ghi rõ:</p>
+<blockquote>
+<p><em>“You are performing a dream - a reflective pass over your memory files. Synthesize what you’ve learned recently into durable, well-organized memories so that future sessions can orient quickly.”</em></p>
+</blockquote>
+<p>Dream subagent chỉ có <strong>read-only bash</strong> — xem project được nhưng không sửa. Nó chỉ để consolidate memory.</p>
+<hr/>
+<h2 id="undercover-mode---do-not-blow-your-cover">Undercover Mode - “Do Not Blow Your Cover”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#undercover-mode---do-not-blow-your-cover" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Cái này rất hay nếu nhìn từ góc chiến lược công ty.</p>
+<p>Nhân viên Anthropic (nhận diện bằng <code>USER_TYPE === 'ant'</code>) dùng Claude Code trên repo public/open-source. <strong>Undercover Mode</strong> (<a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/core/src/lib.rs" class="external"><code>utils/undercover.ts</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) ngăn AI vô tình lộ info nội bộ trong commit/PR.</p>
+<p>Khi bật, nó inject vào system prompt:</p>
+<pre><code>## UNDERCOVER MODE - CRITICAL
+
+You are operating UNDERCOVER in a PUBLIC/OPEN-SOURCE repository. Your commit
+messages, PR titles, and PR bodies MUST NOT contain ANY Anthropic-internal
+information. Do not blow your cover.
+
+NEVER include in commit messages or PR descriptions:
+- Internal model codenames (animal names like Capybara, Tengu, etc.)
+- Unreleased model version numbers (e.g., opus-4-7, sonnet-4-8)
+- Internal repo or project names
+- Internal tooling, Slack channels, or short links (e.g., go/cc, #claude-code-…)
+- The phrase &quot;Claude Code&quot; or any mention that you are an AI
+- Co-Authored-By lines or any other attribution
+</code></pre>
+<p>Logic kích hoạt:</p>
+<ul>
+<li><code>CLAUDE_CODE_UNDERCOVER=1</code> ép ON (kể cả internal repo)</li>
+<li>Nếu không thì <strong>tự động</strong>: active UNLESS remote của repo match allowlist nội bộ</li>
+<li>Không có force-OFF — <em>“nếu không chắc là internal repo, cứ undercover”</em></li>
+</ul>
+<p>Từ đây xác nhận:</p>
+<ol>
+<li><strong>Nhân viên Anthropic dùng Claude Code để đóng góp open-source</strong> — và AI được dặn giấu việc nó là AI</li>
+<li><strong>Codename model nội bộ là tên động vật</strong> — Capybara, Tengu, v.v.</li>
+<li><strong>“Tengu”</strong> xuất hiện rất nhiều như prefix feature flag và analytics event — gần như chắc chắn là <strong>codename nội bộ của dự án Claude Code</strong></li>
+</ol>
+<p>Tất cả bị dead-code-eliminate khỏi build public. Nhưng sourcemap thì không quan tâm dead code.</p>
+<p>Nó làm mình tự hỏi nội bộ họ đang “quậy” open source repo tới mức nào.</p>
+<hr/>
+<h2 id="multi-agent-orchestration---coordinator-mode">Multi-Agent Orchestration - “Coordinator Mode”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multi-agent-orchestration---coordinator-mode" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Claude Code có hẳn hệ orchestration đa-agent trong <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates/query/src" class="external"><code>coordinator/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, bật qua <code>CLAUDE_CODE_COORDINATOR_MODE=1</code>.</p>
+<p>Khi bật, Claude Code chuyển từ single agent thành <strong>coordinator</strong> spawn và quản nhiều worker agent song song. Prompt coordinator ở <a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/query/src/agent_tool.rs" class="external"><code>coordinatorMode.ts</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> là một bài mẫu thiết kế multi-agent:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Phase</th><th>Who</th><th>Purpose</th></tr></thead><tbody><tr><td><strong>Research</strong></td><td>Workers (parallel)</td><td>Investigate codebase, find files, understand problem</td></tr><tr><td><strong>Synthesis</strong></td><td><strong>Coordinator</strong></td><td>Read findings, understand the problem, craft specs</td></tr><tr><td><strong>Implementation</strong></td><td>Workers</td><td>Make targeted changes per spec, commit</td></tr><tr><td><strong>Verification</strong></td><td>Workers</td><td>Test changes work</td></tr></tbody></table></div>
+<p>Prompt dạy parallelism rất trực diện:</p>
+<blockquote>
+<p><em>“Parallelism is your superpower. Workers are async. Launch independent workers concurrently whenever possible - don’t serialize work that can run simultaneously.”</em></p>
+</blockquote>
+<p>Workers nói chuyện bằng XML <code>&lt;task-notification></code>. Có <strong>scratchpad directory</strong> (gated <code>tengu_scratch</code>) để chia sẻ kiến thức bền giữa worker. Và prompt có viên ngọc cấm “lười”:</p>
+<blockquote>
+<p><em>Do NOT say “based on your findings” - read the actual findings and specify exactly what to do.</em></p>
+</blockquote>
+<p>Hệ còn có khả năng <strong>Agent Teams/Swarm</strong> (<code>tengu_amber_flint</code>) với teammate in-process dùng <code>AsyncLocalStorage</code> để cô lập context, teammate theo process dùng tmux/iTerm2 panes, đồng bộ memory team, và gán màu để phân biệt trực quan.</p>
+<hr/>
+<h2 id="fast-mode-trong-nội-bộ-gọi-là-penguin-mode">Fast Mode trong nội bộ gọi là “Penguin Mode”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fast-mode-trong-nội-bộ-gọi-là-penguin-mode" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Ừ, họ gọi là Penguin Mode thật. API endpoint trong <a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/core/src/lib.rs" class="external"><code>utils/fastMode.ts</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> là:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="typescript" data-theme="github-light github-dark"><code data-language="typescript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> endpoint</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> `${</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">getOauthConfig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">().</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">BASE_API_URL</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">}/api/claude_code_penguin_mode`</span></span></code></pre></figure>
+<p>Config key là <code>penguinModeOrgEnabled</code>. Kill-switch là <code>tengu_penguins_off</code>. Analytics event fail là <code>tengu_org_penguin_mode_fetch_failed</code>. Penguin all the way down.</p>
+<hr/>
+<h2 id="kiến-trúc-system-prompt">Kiến trúc system prompt<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kiến-trúc-system-prompt" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>System prompt không phải một string đơn như đa số app — nó được build từ <strong>các section mô-đun, cache được</strong> và compose runtime trong <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates/core/src" class="external"><code>constants/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>.</p>
+<p>Kiến trúc dùng marker <code>SYSTEM_PROMPT_DYNAMIC_BOUNDARY</code> để tách prompt thành:</p>
+<ul>
+<li><strong>Static sections</strong> - cache được giữa org (không đổi theo user)</li>
+<li><strong>Dynamic sections</strong> - nội dung theo user/session, làm “vỡ cache” khi đổi</li>
+</ul>
+<p>Có function tên <code>DANGEROUS_uncachedSystemPromptSection()</code> cho phần volatile bạn muốn phá cache có chủ đích. Tên gọi đã nói lên việc ai đó từng “ăn hành” vì cache prompt.</p>
+<h3 id="hướng-dẫn-về-rủi-ro-an-ninh">Hướng dẫn về rủi ro an ninh<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hướng-dẫn-về-rủi-ro-an-ninh" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Một section đáng chú ý là <code>CYBER_RISK_INSTRUCTION</code> trong <a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/core/src/lib.rs" class="external"><code>constants/cyberRiskInstruction.ts</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, có header cảnh báo lớn:</p>
+<pre><code>IMPORTANT: DO NOT MODIFY THIS INSTRUCTION WITHOUT SAFEGUARDS TEAM REVIEW
+This instruction is owned by the Safeguards team (David Forsythe, Kyla Guru)
+</code></pre>
+<p>Vậy là ta biết rõ ai ở Anthropic sở hữu các quyết định “ranh giới an ninh” và nó được quản trị bởi team cụ thể, có tên người. Nội dung hướng dẫn đặt ranh: security testing được phép thì ok, nhưng kỹ thuật phá hoại và compromise supply chain thì không.</p>
+<hr/>
+<h2 id="registry-tool-đầy-đủ---40-tool">Registry tool đầy đủ - 40+ tool<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#registry-tool-đầy-đủ---40-tool" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Hệ tool của Claude Code nằm ở <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates/tools/src" class="external"><code>tools/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. Đây là danh sách:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Tool</th><th>What It Does</th></tr></thead><tbody><tr><td><strong>AgentTool</strong></td><td>Spawn child agents/subagents</td></tr><tr><td><strong>BashTool</strong> / <strong>PowerShellTool</strong></td><td>Shell execution (with optional sandboxing)</td></tr><tr><td><strong>FileReadTool</strong> / <strong>FileEditTool</strong> / <strong>FileWriteTool</strong></td><td>File operations</td></tr><tr><td><strong>GlobTool</strong> / <strong>GrepTool</strong></td><td>File search (uses native <code>bfs</code>/<code>ugrep</code> when available)</td></tr><tr><td><strong>WebFetchTool</strong> / <strong>WebSearchTool</strong> / <strong>WebBrowserTool</strong></td><td>Web access</td></tr><tr><td><strong>NotebookEditTool</strong></td><td>Jupyter notebook editing</td></tr><tr><td><strong>SkillTool</strong></td><td>Invoke user-defined skills</td></tr><tr><td><strong>REPLTool</strong></td><td>Interactive VM shell (bare mode)</td></tr><tr><td><strong>LSPTool</strong></td><td>Language Server Protocol communication</td></tr><tr><td><strong>AskUserQuestionTool</strong></td><td>Prompt user for input</td></tr><tr><td><strong>EnterPlanModeTool</strong> / <strong>ExitPlanModeV2Tool</strong></td><td>Plan mode control</td></tr><tr><td><strong>BriefTool</strong></td><td>Upload/summarize files to claude.ai</td></tr><tr><td><strong>SendMessageTool</strong> / <strong>TeamCreateTool</strong> / <strong>TeamDeleteTool</strong></td><td>Agent swarm management</td></tr><tr><td><strong>TaskCreateTool</strong> / <strong>TaskGetTool</strong> / <strong>TaskListTool</strong> / <strong>TaskUpdateTool</strong> / <strong>TaskOutputTool</strong> / <strong>TaskStopTool</strong></td><td>Background task management</td></tr><tr><td><strong>TodoWriteTool</strong></td><td>Write todos (legacy)</td></tr><tr><td><strong>ListMcpResourcesTool</strong> / <strong>ReadMcpResourceTool</strong></td><td>MCP resource access</td></tr><tr><td><strong>SleepTool</strong></td><td>Async delays</td></tr><tr><td><strong>SnipTool</strong></td><td>History snippet extraction</td></tr><tr><td><strong>ToolSearchTool</strong></td><td>Tool discovery</td></tr><tr><td><strong>ListPeersTool</strong></td><td>List peer agents (UDS inbox)</td></tr><tr><td><strong>MonitorTool</strong></td><td>Monitor MCP servers</td></tr><tr><td><strong>EnterWorktreeTool</strong> / <strong>ExitWorktreeTool</strong></td><td>Git worktree management</td></tr><tr><td><strong>ScheduleCronTool</strong></td><td>Schedule cron jobs</td></tr><tr><td><strong>RemoteTriggerTool</strong></td><td>Trigger remote agents</td></tr><tr><td><strong>WorkflowTool</strong></td><td>Execute workflow scripts</td></tr><tr><td><strong>ConfigTool</strong></td><td>Modify settings (<strong>internal only</strong>)</td></tr><tr><td><strong>TungstenTool</strong></td><td>Advanced features (<strong>internal only</strong>)</td></tr><tr><td><strong>MCPTool</strong></td><td>Generic MCP tool execution</td></tr><tr><td><strong>McpAuthTool</strong></td><td>MCP server authentication</td></tr><tr><td><strong>SyntheticOutputTool</strong></td><td>Structured output via dynamic JSON schemas</td></tr><tr><td><strong>SuggestBackgroundPRTool</strong></td><td>Suggest background PRs (<strong>internal only</strong>)</td></tr><tr><td><strong>VerifyPlanExecutionTool</strong></td><td>Verify plan execution (gated by <code>CLAUDE_CODE_VERIFY_PLAN</code>)</td></tr><tr><td><strong>CtxInspectTool</strong></td><td>Context window inspection (gated by <code>CONTEXT_COLLAPSE</code>)</td></tr><tr><td><strong>TerminalCaptureTool</strong></td><td>Terminal panel capture (gated by <code>TERMINAL_PANEL</code>)</td></tr><tr><td><strong>CronCreateTool</strong> / <strong>CronDeleteTool</strong> / <strong>CronListTool</strong></td><td>Granular cron job management (under <code>ScheduleCronTool/</code>)</td></tr><tr><td><strong>SendUserFile</strong> / <strong>PushNotification</strong> / <strong>SubscribePR</strong></td><td>KAIROS-exclusive tools</td></tr></tbody></table></div>
+<p>Tool được đăng ký qua <code>getAllBaseTools()</code> rồi filter theo feature gate, user type, env flag, và luật deny permission. Có <strong>tool schema cache</strong> (<a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/tools/src/lib.rs" class="external"><code>toolSchemaCache.ts</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) cache JSON schema để tiết kiệm token.</p>
+<hr/>
+<h2 id="hệ-permission-và-security">Hệ permission và security<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hệ-permission-và-security" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Permission system của Claude Code trong <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates/core/src" class="external"><code>tools/permissions/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> phức tạp hơn “allow/deny” rất nhiều:</p>
+<p><strong>Permission Modes</strong>: <code>default</code> (hỏi tương tác), <code>auto</code> (auto-approve bằng ML classifier dựa trên transcript), <code>bypass</code> (bỏ check), <code>yolo</code> (deny all — đặt tên mỉa mai)</p>
+<p><strong>Risk Classification</strong>: mọi action của tool được phân loại <strong>LOW</strong>, <strong>MEDIUM</strong>, hoặc <strong>HIGH</strong> risk. Có <strong>YOLO classifier</strong> — ML nhanh để quyết định permission tự động.</p>
+<p><strong>Protected Files</strong>: <code>.gitconfig</code>, <code>.bashrc</code>, <code>.zshrc</code>, <code>.mcp.json</code>, <code>.claude.json</code> và nhiều file khác bị chặn khỏi auto-edit.</p>
+<p><strong>Path Traversal Prevention</strong>: URL-encoded traversal, Unicode normalization, backslash injection, case-insensitive path manipulation — đều được xử lý.</p>
+<p><strong>Permission Explainer</strong>: một LLM call riêng giải thích rủi ro tool cho user trước khi approve. Khi Claude nói “lệnh này sẽ sửa git config”, phần giải thích đó cũng do Claude generate.</p>
+<hr/>
+<h2 id="beta-headers-ẩn-và-api-feature-chưa-release">Beta headers ẩn và API feature chưa release<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#beta-headers-ẩn-và-api-feature-chưa-release" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>File <a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/api/src/lib.rs" class="external"><code>constants/betas.ts</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> lộ ra mọi beta feature Claude Code “đàm phán” với API:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="typescript" data-theme="github-light github-dark"><code data-language="typescript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'interleaved-thinking-2025-05-14'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">      // Extended thinking</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'context-1m-2025-08-07'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">                // 1M token context window</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'structured-outputs-2025-12-15'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">        // Structured output format</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'web-search-2025-03-05'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">                // Web search</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'advanced-tool-use-2025-11-20'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">         // Advanced tool use</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'effort-2025-11-24'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">                    // Effort level control</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'task-budgets-2026-03-13'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">              // Task budget management</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'prompt-caching-scope-2026-01-05'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">      // Prompt cache scoping</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'fast-mode-2026-02-01'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">                 // Fast mode (Penguin)</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'redact-thinking-2026-02-12'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">           // Redacted thinking</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'token-efficient-tools-2026-03-28'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">     // Token-efficient tool schemas</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'afk-mode-2026-01-31'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">                  // AFK mode</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'cli-internal-2026-02-09'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">             // Internal-only (ant)</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'advisor-tool-2026-03-01'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">              // Advisor tool</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'summarize-connector-text-2026-03-13'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  // Connector text summarization</span></span></code></pre></figure>
+<p><code>redact-thinking</code>, <code>afk-mode</code>, và <code>advisor-tool</code> cũng chưa release.</p>
+<hr/>
+<h2 id="model-sắp-tới---capybara-opus-47-và-sonnet-48">Model sắp tới - Capybara, Opus 4.7, và Sonnet 4.8<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-sắp-tới---capybara-opus-47-và-sonnet-48" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Codebase có reference tới các model Anthropic chưa công bố:</p>
+<ul>
+<li><strong>Claude “Capybara”</strong> - họ model mới đã v2, có biến thể <code>capybara-v2-fast</code> chuẩn bị với <strong>1M context window</strong></li>
+<li>Capybara có tier “fast” và tier thinking thường</li>
+<li><strong>Opus 4.7</strong> và <strong>Sonnet 4.8</strong> đã được reference trong code</li>
+</ul>
+<h3 id="kỹ-thuật-production-quanh-capybara">Kỹ thuật production quanh Capybara<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kỹ-thuật-production-quanh-capybara" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Code cho thấy Anthropic gặp một failure mode production thật: Capybara có thể dừng sinh sớm khi prompt “giống” turn boundary sau tool results. Thay vì chờ model fix, họ giảm thiểu bằng <strong>prompt-shape surgery</strong>:</p>
+<ol>
+<li><strong>Force marker an toàn</strong> (<code>Tool loaded.</code>) để tránh boundary mơ hồ</li>
+<li><strong>Relocate các block “rủi ro”</strong> có thể kích stop sớm</li>
+<li><strong>Smoosh reminder text vào tool results</strong> để giữ dòng generation</li>
+<li><strong>Thêm marker không rỗng cho output tool rỗng</strong> để tránh làm model rối</li>
+</ol>
+<p>Tất cả bọc bằng <strong>kill-switch gates</strong> (<code>tengu_*</code>) để rollout theo giai đoạn và revert nhanh.</p>
+<ul>
+<li>Comment có <strong>bằng chứng A/B test cụ thể</strong> (không chung chung) → vùng này “launch-critical”</li>
+<li>Comment kiểu <em>“un-gate once validated on external via A/B”</em> xác nhận <strong>ant/internal users là canary</strong> trước rollout rộng</li>
+<li>Diễn giải mạnh nhất: Anthropic đang chuẩn bị <strong>họ model Capybara</strong> với biến thể fast (<code>capybara-v2-fast</code>), hỗ trợ tới <strong>1M context</strong></li>
+</ul>
+<p>Không có gì xác nhận ngày launch hay SKU chính thức, nhưng chữ ký implement hợp một model family đang chuẩn bị release ;)</p>
+<hr/>
+<h2 id="feature-gating---internal-vs-external-build">Feature gating - internal vs external build<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-gating---internal-vs-external-build" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Đây là phần kiến trúc thú vị nhất.</p>
+<p>Claude Code dùng <strong>compile-time feature flags</strong> qua <code>feature()</code> của Bun (<code>bun:bundle</code>). Bundler sẽ <strong>constant-fold</strong> và <strong>dead-code-eliminate</strong> các nhánh bị gate khỏi build public. Danh sách flag:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Flag</th><th>What It Gates</th></tr></thead><tbody><tr><td><code>PROACTIVE</code> / <code>KAIROS</code></td><td>Always-on assistant mode</td></tr><tr><td><code>KAIROS_BRIEF</code></td><td>Brief command</td></tr><tr><td><code>BRIDGE_MODE</code></td><td>Remote control via claude.ai</td></tr><tr><td><code>DAEMON</code></td><td>Background daemon mode</td></tr><tr><td><code>VOICE_MODE</code></td><td>Voice input</td></tr><tr><td><code>WORKFLOW_SCRIPTS</code></td><td>Workflow automation</td></tr><tr><td><code>COORDINATOR_MODE</code></td><td>Multi-agent orchestration</td></tr><tr><td><code>TRANSCRIPT_CLASSIFIER</code></td><td>AFK mode (ML auto-approval)</td></tr><tr><td><code>BUDDY</code></td><td>Companion pet system</td></tr><tr><td><code>NATIVE_CLIENT_ATTESTATION</code></td><td>Client attestation</td></tr><tr><td><code>HISTORY_SNIP</code></td><td>History snipping</td></tr><tr><td><code>EXPERIMENTAL_SKILL_SEARCH</code></td><td>Skill discovery</td></tr></tbody></table></div>
+<p>Ngoài ra, <code>USER_TYPE === 'ant'</code> gate các feature nội bộ: staging API (<code>claude-ai.staging.ant.dev</code>), internal beta headers, Undercover mode, command <code>/security-review</code>, <code>ConfigTool</code>, <code>TungstenTool</code>, và debug dump prompt ra <code>~/.config/claude/dump-prompts/</code>.</p>
+<p><strong>GrowthBook</strong> xử lý runtime feature gating với cache rất “gắt”. Flag prefix <code>tengu_</code> điều khiển từ fast mode tới memory consolidation. Nhiều check dùng <code>getFeatureValue_CACHED_MAY_BE_STALE()</code> để tránh block main loop — dữ liệu stale được xem là chấp nhận được cho gate.</p>
+<hr/>
+<h2 id="một-vài-phát-hiện-đáng-chú-ý-khác">Một vài phát hiện đáng chú ý khác<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#một-vài-phát-hiện-đáng-chú-ý-khác" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="upstream-proxy">Upstream proxy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#upstream-proxy" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Thư mục <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates/bridge/src" class="external"><code>upstreamproxy/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> có proxy relay “container-aware”, dùng <strong><code>prctl(PR_SET_DUMPABLE, 0)</code></strong> để ngăn ptrace heap memory với cùng UID. Nó đọc session token từ <code>/run/ccr/session_token</code> trong CCR container, tải CA cert, và chạy relay CONNECT→WebSocket local. Anthropic API, GitHub, npmjs.org, và pypi.org được loại khỏi proxy.</p>
+<h3 id="bridge-mode">Bridge mode<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bridge-mode" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Một bridge JWT-auth trong <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates/bridge/src" class="external"><code>bridge/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> để tích hợp với claude.ai. Hỗ trợ work mode: <code>'single-session'</code> | <code>'worktree'</code> | <code>'same-dir'</code>. Có trusted device token cho tier bảo mật cao hơn.</p>
+<h3 id="codenames-lộ-trong-migrations">Codenames lộ trong migrations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#codenames-lộ-trong-migrations" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Thư mục <a href="https://github.com/kuberwastaken/claude-code/tree/main/src-rust/crates/core/src" class="external"><code>migrations/</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> lộ lịch sử codename:</p>
+<ul>
+<li><code>migrateFennecToOpus</code> - <strong>“Fennec”</strong> là codename Opus</li>
+<li><code>migrateSonnet1mToSonnet45</code> - Sonnet 1M context thành Sonnet 4.5</li>
+<li><code>migrateSonnet45ToSonnet46</code> - Sonnet 4.5 → Sonnet 4.6</li>
+<li><code>resetProToOpusDefault</code> - Pro user từng bị reset về Opus</li>
+</ul>
+<h3 id="attribution-header">Attribution header<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#attribution-header" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Mọi API request gồm:</p>
+<pre><code>x-anthropic-billing-header: cc_version={VERSION}.{FINGERPRINT}; 
+  cc_entrypoint={ENTRYPOINT}; cch={ATTESTATION_PLACEHOLDER}; cc_workload={WORKLOAD};
+</code></pre>
+<p>Feature <code>NATIVE_CLIENT_ATTESTATION</code> cho Bun HTTP stack overwrite placeholder <code>cch=00000</code> bằng hash tính toán — kiểu kiểm chứng request đến từ Claude Code “thật”.</p>
+<h3 id="computer-use---chicago">Computer Use - “Chicago”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#computer-use---chicago" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Claude Code có full Computer Use implementation, codename nội bộ <strong>“Chicago”</strong>, build trên <code>@ant/computer-use-mcp</code>. Nó cung cấp screenshot, click/keyboard input, và coordinate transform. Bị gate theo gói Max/Pro (internal user có bypass).</p>
+<h3 id="pricing">Pricing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pricing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Giá trong <a href="https://github.com/kuberwastaken/claude-code/blob/main/src-rust/crates/api/src/lib.rs" class="external"><code>utils/modelCost.ts</code><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> khớp <a href="https://docs.anthropic.com/en/docs/about-claude/models" class="external">pricing công khai của Anthropic<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. Không có gì mới.</p>
+<hr/>
+<h2 id="lời-kết">Lời kết<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lời-kết" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Không phóng đại: đây là một trong những cái nhìn toàn diện nhất mà chúng ta từng có về cách một AI coding assistant production hoạt động “dưới nắp capo”. Bằng chính source code.</p>
+<p>Vài điểm nổi bật:</p>
+<p><strong>Engineering thật sự ấn tượng.</strong> Đây không phải project cuối tuần bọc trong CLI. Multi-agent coordination, dream system, three-gate trigger, compile-time feature elimination — đều là những hệ thống được nghĩ kỹ.</p>
+<p><strong>Còn rất nhiều thứ sắp tới.</strong> KAIROS (always-on Claude), ULTRAPLAN (planning remote 30 phút), Buddy companion, coordinator mode, agent swarms, workflow scripts… codebase đi trước bản public một đoạn xa. Phần lớn bị feature-gated và “vô hình” với build ngoài.</p>
+<p><strong>Văn hoá nội bộ lộ rõ.</strong> Codename động vật (Tengu, Fennec, Capybara), tên feature vui (Penguin Mode, Dream System), pet Tamagotchi kèm gacha. Có vẻ một số người ở Anthropic đang “enjoy”.</p>
+<p>Nếu có một takeaway: security khó. Nhưng <code>.npmignore</code> còn khó hơn, apparently :P</p>
+<hr/>
+<p>Một bài viết bởi <a href="https://kuber.studio/" class="external">Kuber Mehta<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" id="toc" class aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content" class><ul class="overflow"><li class="depth-0"><a href="#vì-sao-chuyện-này-xảy-ra-được" data-for="vì-sao-chuyện-này-xảy-ra-được">Vì sao chuyện này xảy ra được?</a></li><li class="depth-0"><a href="#claude-code-bên-trong-trông-ra-sao" data-for="claude-code-bên-trong-trông-ra-sao">Claude Code “bên trong” trông ra sao?</a></li><li class="depth-0"><a href="#buddy---tamagotchi-trong-terminal-của-bạn" data-for="buddy---tamagotchi-trong-terminal-của-bạn">BUDDY - Tamagotchi trong terminal của bạn</a></li><li class="depth-1"><a href="#hệ-gacha" data-for="hệ-gacha">Hệ gacha</a></li><li class="depth-1"><a href="#18-loài-được-che-trong-code" data-for="18-loài-được-che-trong-code">18 loài (được che trong code)</a></li><li class="depth-1"><a href="#stats-mắt-mũ-và-linh-hồn" data-for="stats-mắt-mũ-và-linh-hồn">Stats, mắt, mũ, và “linh hồn”</a></li><li class="depth-1"><a href="#lore" data-for="lore">Lore</a></li><li class="depth-0"><a href="#kairos---always-on-claude" data-for="kairos---always-on-claude">KAIROS - “Always-On Claude”</a></li><li class="depth-1"><a href="#cách-nó-hoạt-động" data-for="cách-nó-hoạt-động">Cách nó hoạt động</a></li><li class="depth-1"><a href="#brief-mode" data-for="brief-mode">Brief mode</a></li><li class="depth-1"><a href="#tool-độc-quyền" data-for="tool-độc-quyền">Tool “độc quyền”</a></li><li class="depth-0"><a href="#ultraplan---phiên-planning-remote-30-phút" data-for="ultraplan---phiên-planning-remote-30-phút">ULTRAPLAN - phiên planning remote 30 phút</a></li><li class="depth-0"><a href="#dream-system---claude-mơ-thật" data-for="dream-system---claude-mơ-thật">”Dream” System - Claude… mơ thật</a></li><li class="depth-1"><a href="#three-gate-trigger" data-for="three-gate-trigger">Three-gate trigger</a></li><li class="depth-1"><a href="#4-phase" data-for="4-phase">4 phase</a></li><li class="depth-0"><a href="#undercover-mode---do-not-blow-your-cover" data-for="undercover-mode---do-not-blow-your-cover">Undercover Mode - “Do Not Blow Your Cover”</a></li><li class="depth-0"><a href="#multi-agent-orchestration---coordinator-mode" data-for="multi-agent-orchestration---coordinator-mode">Multi-Agent Orchestration - “Coordinator Mode”</a></li><li class="depth-0"><a href="#fast-mode-trong-nội-bộ-gọi-là-penguin-mode" data-for="fast-mode-trong-nội-bộ-gọi-là-penguin-mode">Fast Mode trong nội bộ gọi là “Penguin Mode”</a></li><li class="depth-0"><a href="#kiến-trúc-system-prompt" data-for="kiến-trúc-system-prompt">Kiến trúc system prompt</a></li><li class="depth-1"><a href="#hướng-dẫn-về-rủi-ro-an-ninh" data-for="hướng-dẫn-về-rủi-ro-an-ninh">Hướng dẫn về rủi ro an ninh</a></li><li class="depth-0"><a href="#registry-tool-đầy-đủ---40-tool" data-for="registry-tool-đầy-đủ---40-tool">Registry tool đầy đủ - 40+ tool</a></li><li class="depth-0"><a href="#hệ-permission-và-security" data-for="hệ-permission-và-security">Hệ permission và security</a></li><li class="depth-0"><a href="#beta-headers-ẩn-và-api-feature-chưa-release" data-for="beta-headers-ẩn-và-api-feature-chưa-release">Beta headers ẩn và API feature chưa release</a></li><li class="depth-0"><a href="#model-sắp-tới---capybara-opus-47-và-sonnet-48" data-for="model-sắp-tới---capybara-opus-47-và-sonnet-48">Model sắp tới - Capybara, Opus 4.7, và Sonnet 4.8</a></li><li class="depth-1"><a href="#kỹ-thuật-production-quanh-capybara" data-for="kỹ-thuật-production-quanh-capybara">Kỹ thuật production quanh Capybara</a></li><li class="depth-0"><a href="#feature-gating---internal-vs-external-build" data-for="feature-gating---internal-vs-external-build">Feature gating - internal vs external build</a></li><li class="depth-0"><a href="#một-vài-phát-hiện-đáng-chú-ý-khác" data-for="một-vài-phát-hiện-đáng-chú-ý-khác">Một vài phát hiện đáng chú ý khác</a></li><li class="depth-1"><a href="#upstream-proxy" data-for="upstream-proxy">Upstream proxy</a></li><li class="depth-1"><a href="#bridge-mode" data-for="bridge-mode">Bridge mode</a></li><li class="depth-1"><a href="#codenames-lộ-trong-migrations" data-for="codenames-lộ-trong-migrations">Codenames lộ trong migrations</a></li><li class="depth-1"><a href="#attribution-header" data-for="attribution-header">Attribution header</a></li><li class="depth-1"><a href="#computer-use---chicago" data-for="computer-use---chicago">Computer Use - “Chicago”</a></li><li class="depth-1"><a href="#pricing" data-for="pricing">Pricing</a></li><li class="depth-0"><a href="#lời-kết" data-for="lời-kết">Lời kết</a></li></ul></div></div><div class="graph"><h3>MindMap</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:2,&quot;scale&quot;:1.1,&quot;repelForce&quot;:2,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:50,&quot;fontSize&quot;:0.8,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div><button id="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:1.5,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div class="recent-notes"><h3>Trending Posts</h3><ul class="recent-ul"><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it" class="internal">Source code Claude Code bị leak qua sourcemap trên npm - cùng mổ xẻ</a></h3></div><p class="meta"><time datetime="2026-03-31T00:00:00.000Z">Mar 31, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../Reflections/Clawdbot-will-be-dead-in-a-month" class="internal">Clawdbot will be dead in a month</a></h3></div><p class="meta"><time datetime="2026-01-28T00:00:00.000Z">Jan 28, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../Reflections/The-Bubble-is-Not-What-You-Think" class="internal">The Bubble is Not What You Think</a></h3></div><p class="meta"><time datetime="2026-01-14T00:00:00.000Z">Jan 14, 2026</time></p></div></li></ul></div></div><footer class><p>© 2026 kuberwastaken</p><ul><li><a href="https://www.linkedin.com/in/kubermehta/">LinkedIn</a></li><li><a href="https://x.com/kuberwastaken">X</a></li><li><a href="https://github.com/kuberwastaken">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="application/javascript">var r=!1;function e(){let d=document.querySelectorAll(".twitter-tweet:not([data-twitter-rendered])");if(d.length!==0)if(d.forEach(t=>t.setAttribute("data-twitter-rendered","true")),r)window.twttr&&window.twttr.widgets&&window.twttr.widgets.load();else{let t=document.createElement("script");t.src="https://platform.twitter.com/widgets.js",t.async=!0,t.charset="utf-8",t.onload=()=>{r=!0,window.twttr&&window.twttr.ready&&window.twttr.ready(()=>{window.twttr.widgets.load()})},document.body.appendChild(t)}}document.addEventListener("nav",()=>{setTimeout(e,100)});document.readyState==="loading"?document.addEventListener("DOMContentLoaded",e):e();
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../postscript.js" type="module"></script></html>
