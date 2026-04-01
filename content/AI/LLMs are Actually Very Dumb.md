@@ -1,5 +1,5 @@
 ---
-title: LLMs are Actually Very Dumb
+title: LLM thực ra “rất ngốc”
 draft: true
 tags:
   - Programming
@@ -12,28 +12,28 @@ tags:
 created: 2025-09-21
 modified:
 ---
-and no... that is not an insult, that is just Physics.
+và không... đây không phải lời chửi, mà chỉ là Vật lý.
 
 ![link copy](https://cdn.kuber.studio/assets/media/llms-dumb/NAME.png)
 
-Before I start, let's do something fun - go to ChatGPT or your LLM of choice and run these two queries 
+Trước khi bắt đầu, làm một trò vui nhé — vào ChatGPT hoặc LLM bạn thích và chạy hai câu hỏi này
 
 "is there a seahorse emoji?" & "are there teams in the NFL that don't end with s"
-and if you're too lazy to do that, [here's the direct ChatGPT link to ask it on your browser](https://chatgpt.com/?q=Is%20there%20a%20seahorse%20emoji?)
+và nếu bạn lười, [đây là link ChatGPT để hỏi thẳng trên trình duyệt](https://chatgpt.com/?q=Is%20there%20a%20seahorse%20emoji?)
 
-Now this might get hardcoded in a couple months but I'll show you what it says
+Có thể vài tháng nữa nó sẽ bị “hardcode”/vá lại, nhưng mình sẽ cho bạn xem nó trả lời gì
 
 ![seahorse-init](https://cdn.kuber.studio/assets/media/llms-dumb/seahorse-init.png)
 
-it tries over and over, spamming all emojis trying to find it and then tries saving itself by trying to correct it, until it's stopped.
+nó thử đi thử lại, spam đủ emoji để “tìm”, rồi cố tự cứu bằng cách tự sửa lời, cho đến khi bị dừng lại.
 
 ![seahorse-end](https://cdn.kuber.studio/assets/media/llms-dumb/seahorse-end.png)
 
-funnily enough, both of these instances are also associated with the Mandala Effect (a phenomenon where a large group of people collectively share a false memory about an event or detail)
+buồn cười là cả hai trường hợp này còn liên quan tới Mandala Effect (hiện tượng một nhóm lớn người cùng chia sẻ một ký ức sai về một sự kiện/chi tiết)
 
-so there's people who can swear they've seen a seahorse emoji on their keyboard or know teams in NFL that don't end with "s" while there aren't any.
+nên sẽ có người thề rằng họ từng thấy emoji cá ngựa trên bàn phím, hoặc “biết” có đội NFL không kết thúc bằng chữ "s", trong khi thật ra là không có.
 
-so what the heck is happening? Why is this tech, with billions of dollars in funding
+vậy rốt cuộc chuyện gì đang xảy ra? Vì sao công nghệ này — với hàng tỷ đô tài trợ —
 
 <p align="center" style="font-size: small; font-weight: lighter;">
     When a cryptic billboard led to the most addictive coding challenge of 2025

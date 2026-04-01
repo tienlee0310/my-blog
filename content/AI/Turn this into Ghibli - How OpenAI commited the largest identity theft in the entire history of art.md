@@ -1,5 +1,5 @@
 ---
-title: Turn this into Ghibli - How OpenAI commited the largest identity theft in the entire history of art
+title: Turn this into Ghibli - Khi OpenAI cướp danh tính lớn nhất lịch sử nghệ thuật?
 draft: false
 tags:
   - AI
@@ -16,54 +16,56 @@ modified:
 ---
 ![Accurate Pictoral Representations of OpenAI servers](https://images.firstpost.com/uploads/2025/03/Untitled-design-24-2025-03-c3217cfa7dc4996efb727a6a68b1d29c.jpg?im=FitAndFill=(1200,675))
 
-OpenAI’s ChatGPT turning *everything* into Studio Ghibli art. If you’ve been anywhere near the internet this week, you’ve seen it—selfies, memes, even Elon Musk, all morphed into that lush, whimsical Ghibli vibe. I’m *living* for it, but as someone who’s got one foot in the AI hype train and the other in a sketchbook, I’ve got some mixed feelings too. Let’s dive into this glorious chaos, fueled by X posts and my own unhinged enthusiasm—because who needs sleep when you’ve got AI and art colliding?
+ChatGPT của OpenAI biến *mọi thứ* thành tranh kiểu Studio Ghibli. Nếu bạn “ở gần” Internet tuần này, bạn chắc chắn đã thấy: selfie, meme, thậm chí cả Elon Musk — tất cả được “morph” sang vibe Ghibli đầy xanh mướt và mơ màng. Mình *đang mê* cái trend này, nhưng với một người một chân đứng trên tàu hype AI và chân còn lại ở trong sổ phác thảo, mình cũng có cảm xúc lẫn lộn. Cùng lặn vào mớ hỗn loạn tuyệt đẹp này — được tiếp nhiên liệu bởi các bài trên X và sự hào hứng hơi “mất ngủ” của mình — vì ai cần ngủ khi AI và nghệ thuật đang đâm vào nhau?
 
-### The Studio Ghibli Trend
-Since the feature's rollout, social media, especially X, has been flooded with images transformed into the very distinctive Studio Ghibli style, from portraits to memes. This trend, dubbed the "Ghibli fest," has seen even OpenAI's CEO, Sam Altman, participate by updating his profile picture to a Ghibli-style image [X post](https://x.com/sama/status/1811865432102345678) (now conveniently deleted but I'll post another one here anyways) However, OpenAI has begun blocking some requests for Ghibli-style images, taking a conservative approach to artist styles, but people are smart enough with their prompting to get it anyways.
+### Trend Studio Ghibli
+Từ khi tính năng được rollout, mạng xã hội — đặc biệt là X — ngập tràn ảnh được chuyển sang phong cách Studio Ghibli rất đặc trưng, từ chân dung đến meme. Trend này được gọi là "Ghibli fest"; thậm chí CEO OpenAI Sam Altman cũng tham gia bằng cách đổi ảnh đại diện thành ảnh kiểu Ghibli [X post](https://x.com/sama/status/1811865432102345678) (giờ đã tiện tay bị xoá, nhưng mình vẫn sẽ đăng một cái khác ở đây). Tuy nhiên, OpenAI đã bắt đầu chặn một số yêu cầu tạo ảnh kiểu Ghibli, theo hướng thận trọng với “phong cách của nghệ sĩ”, nhưng người ta prompt khéo là vẫn lách được.
 
 ![Sam Altman as a Ghilbi bro](<https://media-hosting.imagekit.io/b7d846474e4e410f/Screenshot%202025-03-28%20120516.png?Expires=1837751781&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=OEFYTcY0whiWbNyZ75XZfdOVzBxVwLc6L2DOTxcRBS1W5N4hECjJvS1YF-NHweVhEWp06X4k5uWgw6gplmaz4yMFwvpw-4jdFzokU3i-8t3sxALnA2j6X2jiaXrgtIrY8U8802Xqt~SP7zqfYHFNmyOr-5oUycc1amgHYxySOn1LojEDHYu8c3nGUabBHaEU4gCoGLDeo0Dj3f5gXASejs53KYTDt5nxoS06FGMfv5I3WslI2DwMJCNwxoLWf8~Ym--KLFWsuDe6uK7MgZTrcSkvfAP2eVQAxHH8xe4KxS0zBi~UWt3X7z7X9j6gUidBplmkCeZhBBJPJi64ll1bOg__>)
 
-## The Good: Why This Tech is Actually Kinda Cool
+## Mặt tốt: vì sao công nghệ này thật ra cũng khá “cool”
 
-Before we burn OpenAI at the stake, let’s give credit where it’s due. This image generation thing is *wildly* impressive. You can type “turn my dog into a Ghibli character” and bam—Fido’s frolicking with Totoro in a forest that looks like it took months to paint. For non-artists like me (my stick figures are a war crime), this is a game-changer. It’s like handing a kid a magic crayon and saying, “Go nuts.”
+Trước khi đem OpenAI ra thiêu sống, hãy công bằng một chút: chuyện tạo ảnh này *thật sự* ấn tượng. Bạn gõ “turn my dog into a Ghibli character” và bùm — chú chó Fido đang chạy nhảy cùng Totoro trong khu rừng trông như phải mất hàng tháng để vẽ. Với người không phải hoạ sĩ như mình (hình người que của mình là tội ác chiến tranh), đây là một bước ngoặt. Nó như đưa cho một đứa trẻ một cây bút chì màu phép thuật và bảo: “Quậy đi.”
 
-- **Democratizing Art:** Anyone can create beautiful stuff now, no decades of practice required. It’s empowering, especially for hobbyists or kids dreaming of animation.
-- **Creative Boost:** Pros can use it to brainstorm or prototype ideas fast. Imagine a designer tweaking concepts in real-time instead of sketching for hours.
-- **Cultural Hype:** This trend’s got people talking about Ghibli again, maybe even inspiring a new wave of fans to watch the originals.
+- **Dân chủ hoá nghệ thuật:** Giờ ai cũng có thể tạo thứ đẹp, không cần luyện hàng chục năm. Rất “empowering”, đặc biệt với người mới, hobbyist, hoặc trẻ con mơ làm hoạt hình.
+- **Tăng tốc sáng tạo:** Dân chuyên có thể dùng để brainstorm/prototype nhanh. Hãy tưởng tượng designer chỉnh concept theo thời gian thực thay vì sketch hàng giờ.
+- **Hype văn hoá:** Trend này khiến mọi người nói về Ghibli trở lại, thậm chí có thể kéo fan mới đi xem bản gốc.
 
-It’s not just fun—it’s practical. Marketing teams are already churning out Ghibli-style ads, and educators could use it to teach art history Plus, the sheer joy of seeing your favorite memes ghiblified- priceless
+Không chỉ vui — nó còn thực dụng. Team marketing đã bắt đầu “churn” quảng cáo kiểu Ghibli, giáo dục cũng có thể dùng để dạy lịch sử mỹ thuật. Và niềm vui khi thấy meme mình thích được “ghiblify” — vô giá.
 
 ![Iconic meme](https://media.licdn.com/dms/image/v2/D4E22AQE1yHw1EkS5yQ/feedshare-shrink_2048_1536/B4EZXZqqxjHUAs-/0/1743113596569?e=1746057600&v=beta&t=iPTaF_MNbIP72_UlOWjsM98JBudtWDgzLpr6Uyr5jQw)
-## The Bad: Why It’s Also a Total Mess
+## Mặt xấu: vì sao nó cũng là một mớ bòng bong
 
-Now, the flip side—and let me tell you, it’s a doozy. The ethical stench here is hard to ignore. If OpenAI did train on Ghibli’s work without consent, it’s a slap in the face to artists who’ve poured their souls into every frame. Miyazaki himself once called AI animation “an insult to life” Ouch. Imagine him seeing this trend—he’d probably throw his pencil into orbit.
+Giờ tới mặt còn lại — và nói thật là khá “nặng mùi” đạo đức. Nếu OpenAI huấn luyện trên tác phẩm của Ghibli mà không có sự đồng ý, đó là một cái tát vào mặt những nghệ sĩ đổ linh hồn vào từng khung hình. Miyazaki từng gọi hoạt hình AI là “một sự xúc phạm đến sự sống”. Đau. Tưởng tượng ông thấy trend này — chắc ông ném bút chì ra quỹ đạo.
 
-- **Artist Exploitation:** No compensation, no credit, at all, most of all NO PERMISSON
-- **Devaluing Originals:** Flood the internet with Ghibli knockoffs, and the real deal might lose its magic. Why pay for art when AI churns it out free?
-- **Homogenization Risk:** If everyone’s making Ghibli-style everything, we might drown in a sea of sameness, losing the diversity of human creativity.
+- **Khai thác nghệ sĩ:** không bồi thường, không ghi công, và quan trọng nhất là KHÔNG XIN PHÉP
+- **Giảm giá trị bản gốc:** Internet tràn ngập “Ghibli knockoff” thì cái thật có thể mất đi phép màu. Sao phải trả tiền cho nghệ thuật nếu AI bơm ra miễn phí?
+- **Rủi ro đồng nhất hoá:** nếu ai cũng làm mọi thứ theo kiểu Ghibli, ta có thể chìm trong một biển giống nhau, mất đi đa dạng sáng tạo của con người.
 
-I usually don't like Forbes, but I have to agree this time, they called it “the ultimate heartbreak” for Ghibli fans, and I get it—it feels like watching a sacred thing get turned into a cheap party trick [The ChatGPT 4o Studio Ghibli AI Trend Is The Ultimate Heartbreak](https://www.forbes.com/sites/paultassi/2025/03/27/the-chatgpt-4o-studio-ghibli-ai-trend-is-the-ultimate-heartbreak/). And Studio Ghibli? Silent so far, which is either a strategic move or them quietly plotting revenge via animated forest spirits.
+Mình thường không thích Forbes, nhưng lần này phải đồng ý: họ gọi đây là “the ultimate heartbreak” với fan Ghibli, và mình hiểu — cảm giác như một thứ thiêng liêng bị biến thành trò tiệc rẻ tiền [The ChatGPT 4o Studio Ghibli AI Trend Is The Ultimate Heartbreak](https://www.forbes.com/sites/paultassi/2025/03/27/the-chatgpt-4o-studio-ghibli-ai-trend-is-the-ultimate-heartbreak/). Còn Studio Ghibli? Im lặng đến giờ, hoặc là chiến lược, hoặc là họ đang âm thầm lên kế hoạch trả thù bằng các linh hồn rừng hoạt hình.
 
 
 ---
 
-#### How Does it Actually Work Though?
+#### Vậy rốt cuộc nó hoạt động thế nào?
 
-OpenAI's new image generation feature, part of the GPT-4o update, enables users to generate or modify images using textual prompts or by uploading existing images. Announced on March 25, 2025, this feature is described as the "most advanced image generator yet," built on a natively multimodal model capable of handling text, images, and other data types to produce precise, photorealistic outputs It allows for style transformations, making it possible to reimagine photos in various artistic styles, including the distinctive anime aesthetic of Studio Ghibli.
+Tính năng tạo ảnh mới của OpenAI — một phần của bản cập nhật GPT-4o — cho phép người dùng tạo hoặc chỉnh sửa ảnh bằng prompt văn bản hoặc upload ảnh có sẵn. Được công bố ngày 25/03/2025, tính năng này được mô tả là “bộ tạo ảnh tiên tiến nhất hiện nay”, xây trên mô hình đa phương thức “native” có thể xử lý text, ảnh, và nhiều loại dữ liệu khác để tạo đầu ra chính xác, photorealistic. Nó cho phép biến đổi phong cách, khiến việc “tưởng tượng lại” ảnh theo nhiều style nghệ thuật (bao gồm anime kiểu Ghibli) trở nên dễ dàng.
 
-The model's capabilities stem from its training on vast datasets, likely including images and text scraped from the internet. While OpenAI does not disclose specific datasets, research suggests these include a broad spectrum of content, from everyday photographs to high-art pieces like those from Studio Ghibli. This training process, using supervised learning on massive datasets, enables the model to recognize patterns and generate new images, but it also raises questions about the inclusion of copyrighted material without explicit consent (let's be honest, it really really is lol)
-#### The Training Data Conundrum and Studio Ghibli's Silence
+Năng lực của mô hình đến từ việc huấn luyện trên các tập dữ liệu khổng lồ, nhiều khả năng bao gồm ảnh và văn bản được scrape từ Internet. Dù OpenAI không công bố dataset cụ thể, các nghiên cứu cho rằng chúng bao gồm phổ nội dung rất rộng, từ ảnh đời thường đến tác phẩm “high art” như của Studio Ghibli. Quá trình này (supervised learning trên dữ liệu khổng lồ) giúp mô hình nhận mẫu và tạo ảnh mới, nhưng cũng làm dấy lên câu hỏi về việc đưa nội dung có bản quyền vào mà không có consent rõ ràng (thật lòng mà nói thì… gần như chắc chắn là có).
 
-The exact composition of OpenAI's training datasets remains undisclosed, but it's widely assumed to include a diverse range of internet content, from everyday photos to high-art pieces. A Reddit discussion on DALL-E 2's dataset mentions training on approximately 650 million images, including the CLIP and DALL-E datasets, suggesting a vast and varied corpus [r/dalle2 on Reddit: The dataset](https://www.reddit.com/r/dalle2/comments/ule6fu/the_dataset/). Given Studio Ghibli's prominence and the availability of their works online, it's almost extremely certainly likely their art was included.
+#### Bài toán dữ liệu huấn luyện và sự im lặng của Studio Ghibli
 
-there has been no official statement from Studio Ghibli regarding the use of their art in training AI models or the recent trend of generating images in their style. This silence is notable, especially given the studio's historical stance on preserving artistic integrity, as seen in Hayao Miyazaki's passionate condemnation of AI in animation [The ChatGPT, AI-Generated Studio Ghibli Trend, Explained](https://www.forbes.com/sites/danidiplacido/2025/03/27/the-ai-generated-studio-ghibli-trend-explained/). It's plausible they might have concerns, but without a direct response, the debate continues to unfold in the public domain.
+Thành phần dataset của OpenAI vẫn không được công bố, nhưng thường được giả định là gồm đủ loại nội dung trên Internet, từ ảnh thường đến tác phẩm nghệ thuật cao cấp. Một thảo luận trên Reddit về dataset của DALL‑E 2 nói việc huấn luyện trên khoảng 650 triệu ảnh, bao gồm CLIP và DALL‑E datasets, gợi ý một corpus cực lớn và đa dạng [r/dalle2 on Reddit: The dataset](https://www.reddit.com/r/dalle2/comments/ule6fu/the_dataset/). Với mức độ nổi tiếng của Ghibli và việc tác phẩm của họ có trên mạng, gần như rất rất có khả năng art của họ đã được đưa vào.
 
-### FYI Sam is Working VERY Closely with the American Government for AI now
+Đến hiện tại vẫn chưa có tuyên bố chính thức từ Studio Ghibli về việc art của họ bị dùng để huấn luyện AI hay về trend tạo ảnh theo phong cách của họ. Sự im lặng này đáng chú ý, nhất là khi studio từng thể hiện rõ quan điểm bảo vệ tính toàn vẹn nghệ thuật, như trong lần Hayao Miyazaki lên án mạnh mẽ AI trong hoạt hình [The ChatGPT, AI-Generated Studio Ghibli Trend, Explained](https://www.forbes.com/sites/danidiplacido/2025/03/27/the-ai-generated-studio-ghibli-trend-explained/). Có thể họ có lo ngại, nhưng khi chưa có phản hồi trực tiếp, cuộc tranh luận vẫn tiếp diễn trên không gian công cộng.
 
-Sam Altman’s latest stunt—trying to convince the U.S. government to make all internet content fair game for AI training—is gonna be a total trainwreck for anyone who gives a damn about art or privacy. We covered this in one of my past articles : [OpenAI vs DeepSeek - Battle for AI Dominance](https://kuberwastaken.github.io/blog/AI/OpenAI-vs-DeepSeek---The-Battle-for-AI-Dominance-and-the-Meaning-of-Open) but it is something extremely important to cover here too! His excuse? National security—claiming in a March 2025 U.S. Trade Representative submission that if American AI can’t scrape freely, China’s will win the “AI race.” It’s a slick move, but it screws over artists like those behind Studio Ghibli, whose work’s already been hijacked for ChatGPT’s Ghibli-fest. No consent, no cash -just Altman’s crew profiting off their sweat while he spins it as patriotic.
+### FYI: Sam đang làm việc rất sát với chính phủ Mỹ về AI
 
-Privacy’s gonna be awful too. Altman’s plan means every X post, meme, or blurry cat pic you’ve ever uploaded could be sucked into OpenAI’s data vortex—zero opt-in required. Altman’s betting on fear of China to bulldoze ethics, but this could torch creativity and personal boundaries for good.
+Màn mới nhất của Sam Altman — cố thuyết phục chính phủ Mỹ coi toàn bộ nội dung Internet là “đồ ăn tự do” cho huấn luyện AI — sẽ là một cú tàu hoả đâm thẳng vào bất kỳ ai quan tâm nghệ thuật hay quyền riêng tư. Mình đã nói về điều này ở một bài cũ: [OpenAI vs DeepSeek - Battle for AI Dominance](https://kuberwastaken.github.io/blog/AI/OpenAI-vs-DeepSeek---The-Battle-for-AI-Dominance-and-the-Meaning-of-Open), nhưng nó cũng cực kỳ quan trọng để nhắc lại ở đây. Lý do của ông ấy? An ninh quốc gia — lập luận trong một submission tháng 3/2025 gửi U.S. Trade Representative rằng nếu AI Mỹ không được scrape tự do thì Trung Quốc sẽ thắng “cuộc đua AI”. Nước cờ này trông “sạch”, nhưng nó đạp lên giới nghệ sĩ như những người làm Ghibli, những người mà tác phẩm đã bị “hijack” cho Ghibli-fest của ChatGPT. Không consent, không tiền — chỉ có đội của Altman kiếm lời trên mồ hôi người khác trong khi ông ấy đóng gói nó thành lòng yêu nước.
 
-#### Conclusion: Balancing Innovation and Integrity
+Quyền riêng tư cũng sẽ tệ. Kế hoạch này đồng nghĩa mọi bài X, meme, hay ảnh mèo mờ bạn từng upload đều có thể bị hút vào “xoáy dữ liệu” OpenAI — không cần opt-in. Altman đặt cược vào nỗi sợ Trung Quốc để san phẳng đạo đức, nhưng điều này có thể thiêu rụi sáng tạo và ranh giới cá nhân lâu dài.
 
-The intersection of AI and art, as seen in the Ghibli trend, presents a complex scenario where innovation and ethics collide. While OpenAI's image generation model offers exciting possibilities for creativity and expression, it also challenges our notions of originality, ownership, and the value of human artistic endeavor. As we move forward, it's crucial to engage in open dialogue, establish clear guidelines for the use of artistic works in AI training data, and ensure that both technological advancement and artistic integrity are respected. This balance will define the future of AI in creative industries, and the Ghibli trend is just the beginning of this conversation.
+#### Kết luận: cân bằng giữa đổi mới và sự liêm chính
+
+Giao điểm giữa AI và nghệ thuật (như trend Ghibli) tạo ra một tình huống phức tạp nơi đổi mới và đạo đức va chạm. Dù mô hình tạo ảnh của OpenAI mở ra nhiều khả năng thú vị cho sáng tạo và biểu đạt, nó cũng thách thức quan niệm về tính nguyên bản, quyền sở hữu, và giá trị của lao động nghệ thuật con người. Khi đi tiếp, ta cần đối thoại cởi mở, đặt ra hướng dẫn rõ ràng cho việc dùng tác phẩm nghệ thuật trong dữ liệu huấn luyện AI, và đảm bảo cả tiến bộ công nghệ lẫn tính toàn vẹn nghệ thuật đều được tôn trọng. Cán cân này sẽ định nghĩa tương lai AI trong các ngành sáng tạo — và trend Ghibli chỉ mới là khởi đầu của cuộc trò chuyện đó.
+

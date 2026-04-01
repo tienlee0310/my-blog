@@ -1,5 +1,5 @@
 ---
-title: The AI Models Race to The Bottom in 2025
+title: Cuộc đua “về 0” của các mô hình AI năm 2025
 draft: false
 tags:
   - AI
@@ -16,40 +16,40 @@ tags:
 created: 2025-03-10
 modified:
 ---
- The AI industry is undergoing a deflationary shock that would make Bitcoin miners blush. Since GPT-3’s 2020 debut, large language model (LLM) costs have collapsed from **60 to 0.02 per million tokens**—a **3,000x price implosion** reshaping business models, technical architectures, and power dynamics. Let’s dissect the undercurrents driving this race to zero and what comes next.
+ Ngành AI đang trải qua một cú sốc giảm phát đến mức có lẽ thợ đào Bitcoin cũng phải “ngượng”. Kể từ khi GPT-3 ra mắt năm 2020, chi phí LLM sụp từ **60 xuống 0,02 cho mỗi triệu token** — một cú **nổ giá 3.000x** đang định hình lại mô hình kinh doanh, kiến trúc kỹ thuật, và tương quan quyền lực. Hãy mổ xẻ những dòng chảy ngầm đằng sau cuộc đua về 0 này và điều gì sẽ đến tiếp theo.
 
 ![Price of AI Models](<https://media-hosting.imagekit.io//eef6c485ecf64673/Screenshot%202025-03-10%20013811.png?Expires=1836159218&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=v5fUX4vS~OlTijx~SyjNXV3lQqwzaqNBt9EbpG1iUK6uSyTMwpvN5acZJlB-6kxkZyjCFQw9VkEo~CNZ3XEcER0vHwjiOXtA3M4WttdJU5TNTQNBgS3i0Eaiko6R-4sVKxtkBQTnFPa1km6AF7PgsBV7wk4aGId459KMUZ5ea2yPzZhxco45R~Kiv09BUzq4VcmaT7EpywLrtvD~n2kkpvNDJQjKHWqkiX7vaEFeG-9mjhcBjODt2OEZ~9RyJsdVzFdGxfqlaEz7ceQjTolB4jbvVkpFm75axkyCHxUzoCrGUPhOE1sdgSh-q9wcam5wT1VvnTfVurAsWiwqsf6xGw__>)
 
 ---
 
-## Phase 1: The GPT-3 Shockwave (2020-2022)
+## Giai đoạn 1: Cú shock GPT-3 (2020-2022)
 
 ![Image of AI models Quality](https://github.com/Kuberwastaken/Dynamic-Readme-Images/raw/main/screenshot.png)
 
 <p align="center" style="font-size: small; font-weight: lighter;"> Fun fact, this static image updates daily thanks to my project - dynamic readme images </p>
 
-GPT-3’s release wasn’t just a technical leap—it was an economic anomaly. For 18 months, OpenAI operated in a vacuum:
+Việc GPT-3 ra mắt không chỉ là một bước nhảy kỹ thuật — nó còn là một “dị thường” về kinh tế. Trong 18 tháng, OpenAI gần như hoạt động trong một vùng chân không:
 
 - **Pricing Power**: 60/M tokensdespitealternativeslikeJurassic−1(60/M tokensdespitealternativeslikeJurassic−1(45/M)
     
-- **Architectural Lock-In**: Proprietary API with no open-source equivalents
+- **Architectural Lock-In**: API độc quyền, không có bản tương đương mã nguồn mở
     
-- **Developer Mindshare**: 92% of AI projects defaulted to OpenAI
+- **Developer Mindshare**: 92% dự án AI mặc định dùng OpenAI
     
 
-But cracks emerged by late 2022:
+Nhưng đến cuối 2022, các vết nứt bắt đầu xuất hiện:
 
-# The "GPT-3.5 Turbo" Gambit (March 2023)
+# Nước cờ "GPT-3.5 Turbo" (tháng 3/2023)
 
-This 30x price cut wasn’t generosity—it was defensive. Leaks suggested Meta’s LLaMA (released weeks earlier) achieved 80% GPT-3.5 quality at 1/20th the cost. OpenAI’s response? Flood the zone with a “good enough” budget model.
+Cú giảm giá 30x này không phải hào phóng — mà là phòng thủ. Tin rò rỉ cho rằng LLaMA của Meta (ra mắt vài tuần trước đó) đạt 80% chất lượng GPT‑3.5 với chi phí chỉ bằng 1/20. Phản ứng của OpenAI? “Phủ sóng” bằng một mô hình giá rẻ đủ tốt để chặn đà.
 
 ---
 
-## Phase 2: The Open-Source Onslaught (2023-2024)
+## Giai đoạn 2: Làn sóng mã nguồn mở (2023-2024)
 
-The dam broke when Mistral 7B (Sept 2023) proved small models could punch far above their weight
+Con đập vỡ khi Mistral 7B (9/2023) chứng minh mô hình nhỏ vẫn có thể “đấm” vượt hạng cân.
 
-**The New Economics of AI**
+**Kinh tế học mới của AI**
 
 |Model|Tokens/$ (Input)|MT-Bench Score|Hardware Cost/Hour|
 |---|---|---|---|
@@ -57,9 +57,9 @@ The dam broke when Mistral 7B (Sept 2023) proved small models could punch far ab
 |LLaMA 3 70B|120,000|8.5|$12 (Consumer GPUs)|
 |DeepSeek v2|1,000,000|8.7|$0.80 (LoRA Fine-Tuned)|
 
-Three tectonic shifts occurred:
+Ba chuyển dịch “kiến tạo mảng” đã xảy ra:
 
-1. **The China Factor**: DeepSeek’s team reportedly achieved 99% GPT-4 quality at 1/50th cost by combining:
+1. **Yếu tố Trung Quốc**: đội DeepSeek được đồn là đạt 99% chất lượng GPT‑4 với 1/50 chi phí bằng cách kết hợp:
     
     - Quantization-aware training
         
@@ -68,22 +68,22 @@ Three tectonic shifts occurred:
     - State-sponsored GPU access
     
         
-2. **Hardware Arbitrage**: Open-source let developers exploit cheaper hardware:
+2. **Chênh lệch phần cứng (hardware arbitrage)**: mã nguồn mở cho phép developer tận dụng phần cứng rẻ hơn:
     
     - Consumer GPUs (RTX 4090s @ 0.12/kWhvscloudA100s@0.12/kWhvscloudA100s@1.10/kWh)
         
-    - CPU inference via GGUF optimizations
+    - CPU inference nhờ tối ưu GGUF
         
     - Shared GPU pools (Petals, Together)
         
-3. **The Mixture-of-Experts Revolution**: Models like Mixtral 8x7B used conditional parameter activation to reduce inference costs by 4-6x without quality loss.
+3. **Cuộc cách mạng Mixture-of-Experts**: các mô hình như Mixtral 8x7B dùng kích hoạt tham số có điều kiện để giảm chi phí suy luận 4–6x mà không mất chất lượng.
     
 
 ---
 
-## Phase 3: The Great Commoditization (2024-Present)
+## Giai đoạn 3: Thời kỳ “hàng hoá hoá” (2024-nay)
 
-Today’s market resembles the 2010 cloud wars—margin compression has become existential:
+Thị trường hôm nay giống “cloud wars” thập niên 2010 — biên lợi nhuận bị bóp nghẹt đã trở thành chuyện sống còn:
 
 ```javascript
 // Switching costs dropped to near-zero
@@ -99,18 +99,18 @@ app.post('/chat', async (req, res) => {
 
 **Oligopoly Under Siege**
 
-- **OpenAI’s Dilemma**: GPT-4o Mini’s $0.02/M price reportedly operates at **-35% margins** to retain market share
+- **Thế khó của OpenAI**: GPT-4o Mini với giá $0.02/M được đồn là đang chạy ở mức **-35% margin** để giữ thị phần
     
-- **Anthropic’s Miscalculation**: Claude 3’s pricing ($15/M input tokens) led to 72% developer attrition per Artificial Analysis data
+- **Sai lầm của Anthropic**: giá Claude 3 ($15/M input tokens) dẫn tới 72% developer rời bỏ theo dữ liệu Artificial Analysis
     
-- **Google’s Nuclear Option**: Gemini 1.5 Flash undercuts everyone at $0.0075/M using TPU v5e efficiency gains
+- **“Phương án hạt nhân” của Google**: Gemini 1.5 Flash hạ giá tất cả xuống $0.0075/M nhờ hiệu quả TPU v5e
     
 
-Startups now exploit this chaos through:
+Startup đang tận dụng sự hỗn loạn này bằng:
 
-- **Model Roulette**: Auto-switching APIs like Unify.ai
+- **Model Roulette**: tự động chuyển API như Unify.ai
     
-- **Inference Hyperoptimization**:
+- **Siêu tối ưu suy luận (inference)**:
     
 ```rust
 // Techniques squeezing 2-3x more tokens/sec
@@ -121,51 +121,52 @@ Startups now exploit this chaos through:
     }
 ```
 
-- **Legal Gray Zones**: NSFW/financial models avoiding cloud TOS bans
+- **Vùng xám pháp lý**: các mô hình NSFW/tài chính né lệnh cấm TOS của cloud
     
 ---
 
-## The Post-Model Future
+## Kỷ nguyên hậu-mô-hình (post-model)
 
-With LLMs becoming utilities, four new battlegrounds emerge:
+Khi LLM trở thành “tiện ích” (utility), bốn chiến trường mới nổi lên:
 
-1. **Latency Wars**
+1. **Chiến tranh độ trễ (latency)**
     
-    - Sub-100ms responses for real-time applications
+    - Phản hồi dưới 100ms cho ứng dụng thời gian thực
         
-    - Batch processing at $0.0001/page
+    - Xử lý theo lô ở mức $0.0001/trang
         
-2. **Context Collapse**
+2. **Sụp đổ ngữ cảnh (context collapse)**
     
-    - 10M token windows enabling “whole company as context”
+    - Cửa sổ 10M token cho phép “cả công ty làm context”
         
-    - Retrieval-integrated models (RAG 3.0)
+    - Mô hình tích hợp truy hồi (RAG 3.0)
         
-3. **Agent Ecosystems**
+3. **Hệ sinh thái agent**
     
-    - AI “workers” costing $0.01/hour:
-        
-
-4. **Regulatory Capture**
-    
-    - Lobbying for “Safety Compliance” standards that favor incumbents
-        
-    - HIPAA/GDPR-certified model hosting
+    - “Công nhân” AI giá $0.01/giờ:
         
 
-_“OpenAI is pivoting to products because model leadership became a liability. But when every product is just a React frontend over the same 10 models, where’s the moat?”_
+4. **Chiếm lĩnh bằng quy định (regulatory capture)**
+    
+    - Lobbying cho tiêu chuẩn “Safety Compliance” có lợi cho kẻ dẫn đầu
+        
+    - Hosting mô hình đạt chuẩn HIPAA/GDPR
+        
+
+_“OpenAI đang pivot sang sản phẩm vì dẫn đầu mô hình trở thành gánh nặng. Nhưng khi mọi sản phẩm chỉ là một React frontend bọc quanh cùng 10 mô hình, ‘moat’ nằm ở đâu?”_
 
 ---
 
-**The New Developer Playbook**
+**Playbook mới cho developer**
 
-1. Treat LLMs as interchangeable commodities
+1. Coi LLM là hàng hoá có thể thay thế
     
-2. Architect for model fluidity (load balancers, fallback providers)
+2. Thiết kế kiến trúc để linh hoạt theo mô hình (load balancer, fallback provider)
     
-3. Exploit regional pricing disparities (India’s GPU costs are 40% lower than Silicon Valley’s)
+3. Tận dụng chênh lệch giá theo vùng (chi phí GPU ở Ấn Độ thấp hơn Silicon Valley ~40%)
     
-4. Prepare for $0.000001/token inference via photon-based optical computing (Lightmatter, Luminous)
+4. Chuẩn bị cho suy luận ở mức $0.000001/token nhờ điện toán quang học dựa trên photon (Lightmatter, Luminous)
     
 
-The age of worshipping model size is over. The next frontier? Building tools that thrive in an ecosystem where intelligence is cheaper than RAM :P
+Thời kỳ tôn thờ “mô hình càng to càng tốt” đã qua rồi. Biên giới tiếp theo? Xây công cụ sống khỏe trong một hệ sinh thái nơi trí tuệ rẻ hơn cả RAM :P
+

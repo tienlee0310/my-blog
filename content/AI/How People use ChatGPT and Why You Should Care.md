@@ -1,4 +1,173 @@
 ---
+title: Mọi người dùng ChatGPT như thế nào (và vì sao bạn nên quan tâm)
+draft: false
+tags:
+  - AGI
+  - AI
+  - Artificial-Intelligence
+  - GenerativeAI
+  - TechforGood
+  - Technology
+  - ChatGPT
+  - OpenAI
+created: 2025-09-25
+modified:
+---
+OpenAI vừa công bố một bài nghiên cứu và một bài viết rất chi tiết về thứ mà theo mình là một trong những mảnh thông tin quan trọng nhất dành cho bất kỳ ai đang dùng AI hoặc xây dựng sản phẩm với AI.
+
+### Mọi người dùng nhà cung cấp AI lớn nhất (và được dùng nhiều nhất) trên thế giới như thế nào
+
+<p align="center">
+  <img src="https://cdn.kuber.studio/assets/media/chatgpt-use-study/hero.png" alt="Hero Image" />
+</p>
+
+
+Họ thực hiện một nghiên cứu lớn trên 1,5 triệu cuộc trò chuyện để theo dõi cách hành vi sử dụng của người dùng thay đổi như thế nào kể từ khi ChatGPT (và làn sóng AI nói chung) bùng nổ cách đây ba năm.
+
+Mình đã đọc và phân tích toàn bộ paper và thật sự là kết quả “sốc” hơn bạn tưởng.
+
+(*PS: Họ cũng có [một bài blog ngắn](https://openai.com/index/how-people-are-using-chatgpt/) trên website, nhưng hầu như không chi tiết gì :/ nên mình mới viết bài này!*)
+
+# Quy mô thật sự của ChatGPT lớn đến mức nào
+
+Mình từng nghe nhiều dự đoán và con số “trôi nổi” mà không kiểm chứng được, nhưng số liệu lần này thì thật sự… điên rồ.
+
+<p align="center">
+  <img src="https://cdn.kuber.studio/assets/media/chatgpt-use-study/users.png" alt="Hero Image" />
+</p>
+
+
+Tính đến tháng 7/2025, ChatGPT đạt **700 triệu người dùng hoạt động hằng tuần**, gửi **2,5 tỷ tin nhắn mỗi ngày**. Tức là khoảng **29.000 tin nhắn/giây, 24/7.**
+
+Để dễ hình dung: ChatGPT hiện chạm tới khoảng 10% dân số người trưởng thành trên toàn thế giới. Tốc độ phổ cập này gần như **chưa từng có tiền lệ** trong lịch sử công nghệ.
+
+Điều này đã sốc rồi, nhưng cách mọi người dùng nó còn sốc hơn.
+
+## Dùng AI cho công việc vs. dùng cho mục đích cá nhân
+
+Ai cũng nói về ChatGPT như một công cụ tăng năng suất cho công việc. Nhưng **chỉ 27% tin nhắn thực sự liên quan đến công việc**.
+
+![Work vs Non-Work Image](https://cdn.kuber.studio/assets/media/chatgpt-use-study/work-nonwork.png)
+
+Con số này đã **giảm** từ 47% vào tháng 6/2024. Phần lớn việc dùng ChatGPT — hơn 70% — hiện là cho các hoạt động cá nhân, không liên quan công việc.
+
+Điều này không có nghĩa là ít người dùng cho công việc hơn (thực tế, usage cho công việc tăng mạnh). Mà là vì usage cá nhân bùng nổ nhanh hơn nữa.
+
+Nó có nghĩa gì? Tác động kinh tế của AI đối với “home production” — những việc ta làm ngoài giờ làm — có thể lớn ngang hoặc thậm chí lớn hơn tác động của nó lên năng suất lao động chuyên nghiệp.
+
+# Rốt cuộc mọi người đang làm gì?
+
+![Stats Image](https://cdn.kuber.studio/assets/media/chatgpt-use-study/stats.jpeg)
+
+OpenAI phân loại các cuộc trò chuyện theo nhóm và phát hiện gần 80% usage rơi vào chỉ 3 “xô” lớn:
+
+### 1. Hướng dẫn thực tế (29% tổng usage)
+
+Bao gồm dạy kèm, tư vấn “how-to”, lên ý tưởng sáng tạo, hướng dẫn sức khoẻ/thể hình. Nói cách khác, ChatGPT đang trở thành “cố vấn/trợ lý cá nhân” dễ tiếp cận nhất thế giới.
+
+Mình nghi ngờ khá nhiều nhu cầu “Google how-to” và đọc blog đã bị thay thế trực tiếp bằng việc hỏi ChatGPT, nên điều này cũng thú vị.
+
+### 2. Viết lách (24%, giảm từ 36%)
+
+Không chỉ tạo nội dung mới, mà chủ yếu là chỉnh sửa và cải thiện văn bản có sẵn. Khoảng 2/3 yêu cầu viết là kiểu “làm cho hay hơn” thay vì “viết từ đầu”.
+
+### 3. Tìm kiếm thông tin (24% và tăng rất nhanh)
+
+Về cơ bản là dùng ChatGPT như một “Google thông minh hơn”. Nhóm này gần như đã tăng gấp đôi trong năm qua.
+
+Viết lách giảm và tìm kiếm thông tin tăng bùng nổ cho thấy một điều quan trọng: người dùng đang chuyển từ việc dùng ChatGPT như “cỗ máy tạo nội dung” sang dùng nó như một trợ lý nghiên cứu thông minh.
+
+## Lập trình chỉ là một “bong bóng”?*
+
+Mình vẫn chưa chắc về điểm này và cũng không rõ họ lấy thống kê kiểu gì — chỉ tính trên website của họ, hay có tính cả Codex/OpenRouter… nhưng họ nói rằng **chỉ 4,2% tin nhắn ChatGPT liên quan đến lập trình**.
+
+Mình từng thấy số liệu của các công cụ chuyên code như Cursor, GitHub Copilot, hay Claude (có nơi nói ~33% usage là lập trình) — tức là có thể usage code đang “dịch chuyển” sang các công cụ đó? Dù sao đây vẫn là một con số gây sốc và khiến mình nghi ngờ phương pháp đo.
+
+# Nhân khẩu học nào đang dùng ChatGPT
+
+### Khoảng cách giới tính cuối cùng đã khép lại (thậm chí đảo chiều?)
+
+Đầu năm 2023, khoảng 80% người dùng ChatGPT có tên “thiên về nam”. Đến tháng 6/2025, người dùng có tên “thiên về nữ” lại trở thành đa số.
+
+Đây là một trong những cú chuyển dịch nhân khẩu học nhanh nhất trong việc tiếp nhận công nghệ mà mình từng thấy. Nhiều nữ dùng ChatGPT hơn nam một chút? Quá điên.
+
+![Age Image](https://cdn.kuber.studio/assets/media/chatgpt-use-study/gender.png)
+
+### Phân bố theo độ tuổi
+
+Gần 50% tổng tin nhắn đến từ người dùng dưới 26 tuổi.
+
+Sau đó phân bố khá đều cho đến tầm tuổi 70. Nếu bạn đang xây sản phẩm AI thì nhắm vào nhóm này cũng hợp lý, vì họ là những người tiếp nhận công nghệ mới nhanh nhất.
+
+![Age Image](https://cdn.kuber.studio/assets/media/chatgpt-use-study/age.png)
+
+### Mức độ phổ cập toàn cầu
+
+Tốc độ tăng trưởng nhanh nhất hiện tại diễn ra ở các quốc gia thu nhập thấp đến trung bình. Việc dùng ChatGPT đang trở nên thực sự toàn cầu.
+Điều này khá hay vì không chỉ các nước phát triển mới “chuộng” nó.
+
+Về mảng subscription thì không có nhiều dữ liệu, cũng chưa rõ nó scale ra sao cùng gói ChatGPT Go ở Ấn Độ.
+
+# Cách mọi người thật sự tương tác với AI
+
+Paper dùng một mô hình phân loại để chia tin nhắn theo 3 nhóm: **Hỏi (Asking) vs. Làm (Doing) vs. Bộc lộ (Expressing)**.
+
+- **Asking (49%)**: "Help me understand X" or "What should I do about Y?"
+- **Doing (40%)**: "Write this email" or "Create this spreadsheet"
+- **Expressing (11%)**: Casual conversation with no specific goal
+
+Điều thú vị là **Hỏi đang tăng nhanh hơn Làm**. Người dùng ngày càng muốn AI đóng vai trò cố vấn/trợ lý, không chỉ là “máy làm việc hộ” — dù trớ trêu là lúc mới ra mắt, nhiều người lại nghĩ AI chủ yếu để làm việc hộ.
+
+Nhóm nghiên cứu thấy các tin nhắn dạng Hỏi thường nhận đánh giá chất lượng cao hơn (mình đoán là dựa trên việc người dùng copy/nhấn thumbs up).
+
+![Quality Image](https://cdn.kuber.studio/assets/media/chatgpt-use-study/message-quality.png)
+
+Điều này gợi ý rằng người dùng nhận được nhiều giá trị hơn từ AI giúp họ suy nghĩ và gỡ vấn đề, thay vì AI chỉ làm hộ. (Hoặc đơn giản là… họ đang gian lận bài tập học thuật.)
+
+# Mẫu hình sử dụng trong công việc
+
+Khi người dùng dùng ChatGPT cho công việc, các mẫu hình lại giống nhau một cách đáng ngạc nhiên ở hầu hết ngành nghề:
+
+- **Writing dominates work usage overall** (40% of work messages)
+- **Information gathering and decision support** are the main use cases
+- **The same activities appear across completely different professions**
+
+Giá trị kinh tế cốt lõi của ChatGPT đến từ **hỗ trợ ra quyết định**, đặc biệt trong các công việc đòi hỏi tri thức, nơi quyết định tốt hơn sẽ trực tiếp nâng năng suất.
+
+Nhưng sự bùng nổ usage cá nhân ở trên còn gợi ra điều lớn hơn: AI đang trở thành một công cụ nhận thức “đa năng” mà người ta dùng để điều hướng mọi khía cạnh của cuộc sống, không chỉ công việc — điều mà thật ra chúng ta cũng đã kỳ vọng.
+
+# Yếu tố quyền riêng tư của nghiên cứu
+
+Điều làm mình ấn tượng nhất là phương pháp. OpenAI phân tích các cuộc trò chuyện mà **không có con người nào đọc trực tiếp nội dung tin nhắn**.
+
+<p align="center">
+  <img src="https://cdn.kuber.studio/assets/media/chatgpt-use-study/privacy-filter.png" alt="Privacy Image" />
+</p>
+
+
+Họ dùng các bộ phân loại tự động dựa trên LLM để phân loại hội thoại, kiểm chứng với các bộ dữ liệu công khai, và dùng “clean room” dữ liệu an toàn để phân tích nhân khẩu học.
+Đây là một tiền lệ tốt cho việc nghiên cứu dữ liệu nhạy cảm, nhưng bạn tin các mô hình phân loại này đến mức nào? Với trải nghiệm của mình khi xây và huấn luyện chúng trong [một phần công việc ở TREAT](https://www.trytreat.tech/), chúng có thể đúng rất tốt hoặc sai khá nhiều. Hy vọng độ chính xác trong nghiên cứu này không tệ.
+
+## Hàm ý cho những người đang xây sản phẩm AI
+
+Nếu bạn đang xây sản phẩm trong mảng AI, đây là những gì mình rút ra:
+
+1. **Use case cá nhân là cực lớn** - đừng chỉ tập trung vào công cụ tăng năng suất
+
+2. **Hỗ trợ ra quyết định > tự động hoá tác vụ** - người dùng muốn cố vấn, không chỉ “người làm thuê”
+
+3. **Hỗ trợ viết là “tối thiểu phải có”** - nhưng chủ yếu là chỉnh sửa, không phải sáng tác từ đầu
+
+4. **Tìm kiếm thông tin đang bùng nổ** - giao diện/UX cho “search” vẫn còn xa mới giải xong
+
+5. **Mở rộng toàn cầu và theo nhân khẩu học** đang diễn ra nhanh hơn dự đoán
+
+Những sản phẩm AI thành công nhất trong năm tới có lẽ không phải là sản phẩm chỉ tự động hoá tác vụ công việc (cái đó chúng ta có nhiều rồi).
+Mà là những sản phẩm giúp con người đưa ra quyết định tốt hơn trên mọi lĩnh vực của cuộc sống.
+
+Hy vọng bạn thấy bài này thú vị. Nếu bạn thích kiểu nội dung này, mình cũng hay viết các thứ tương tự trên mạng xã hội — cứ lấy link ở phần footer và thêm blog qua RSS để theo dõi cập nhật nhé :)
+
+---
 title: How People use ChatGPT and Why You Should Care
 draft: false
 tags:

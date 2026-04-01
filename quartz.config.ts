@@ -3,7 +3,7 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "ᨒ MindDump",
+    pageTitle: "TIENLE",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -11,7 +11,7 @@ const config: QuartzConfig = {
        provider: 'google', tagId: "G-5C2HC21CS5" 
     },
     locale: "en-US",
-    baseUrl: "kuber.studio/blog",
+    baseUrl: "tienlee0310.github.io/my-blog",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: {
